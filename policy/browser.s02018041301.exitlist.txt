@@ -1,0 +1,180 @@
+ExitPolicy reject 184.107.95.19/24:*
+ExitPolicy reject 147.67.136.3/24:*
+ExitPolicy reject 147.67.136.21/24:*
+ExitPolicy reject 147.67.136.103/24:*
+ExitPolicy reject 195.78.228.19/24:*
+ExitPolicy reject 173.230.151.0/24:*
+ExitPolicy reject 5.145.172.45/24:*
+ExitPolicy reject 136.243.59.114/24:*
+ExitPolicy reject 67.205.125.20/24:*
+ExitPolicy reject 184.107.100.62/24:*
+ExitPolicy reject 72.55.186.61/24:*
+ExitPolicy reject 72.55.186.33/24:*
+ExitPolicy reject 72.55.186.6/24:*
+ExitPolicy reject 195.78.229.186/24:*
+ExitPolicy reject 93.93.70.70/24:*
+ExitPolicy reject 31.11.43.0/24:*
+ExitPolicy reject 37.139.49.0/24:*
+ExitPolicy reject 37.9.53.0/24:*
+ExitPolicy reject 46.151.48.0/22:*
+ExitPolicy reject 46.151.52.0/22:*
+ExitPolicy reject 46.243.140.0/24:*
+ExitPolicy reject 46.243.142.0/24:*
+ExitPolicy reject 46.29.248.0/21:*
+ExitPolicy reject 46.8.255.0/24:*
+ExitPolicy reject 81.94.43.0/24:*
+ExitPolicy reject 85.93.0.0/24:*
+ExitPolicy reject 85.93.5.0/24:*
+ExitPolicy reject 85.121.39.0/24:*
+ExitPolicy reject 85.239.149.0/24:*
+ExitPolicy reject 91.194.254.0/23:*
+ExitPolicy reject 91.195.120.0/24:*
+ExitPolicy reject 91.195.121.0/24:*
+ExitPolicy reject 91.195.254.0/23:*
+ExitPolicy reject 91.207.4.0/22:*
+ExitPolicy reject 91.207.7.0/24:*
+ExitPolicy reject 91.209.12.0/24:*
+ExitPolicy reject 91.212.124.0/24:*
+ExitPolicy reject 91.212.220.0/24:*
+ExitPolicy reject 91.213.126.0/24:*
+ExitPolicy reject 91.217.10.0/23:*
+ExitPolicy reject 91.220.101.0/24:*
+ExitPolicy reject 91.220.163.0/24:*
+ExitPolicy reject 91.220.35.0/24:*
+ExitPolicy reject 91.220.62.0/24:*
+ExitPolicy reject 91.223.89.0/24:*
+ExitPolicy reject 91.225.216.0/22:*
+ExitPolicy reject 91.226.97.0/24:*
+ExitPolicy reject 91.229.210.0/24:*
+ExitPolicy reject 91.230.110.0/24:*
+ExitPolicy reject 91.230.252.0/23:*
+ExitPolicy reject 91.235.2.0/24:*
+ExitPolicy reject 91.236.213.0/24:*
+ExitPolicy reject 91.236.74.0/23:*
+ExitPolicy reject 91.237.198.0/24:*
+ExitPolicy reject 91.238.82.0/24:*
+ExitPolicy reject 91.239.238.0/24:*
+ExitPolicy reject 91.240.128.0/24:*
+ExitPolicy reject 91.240.163.0/24:*
+ExitPolicy reject 91.242.217.0/24:*
+ExitPolicy reject 91.243.115.0/24:*
+ExitPolicy reject 93.171.205.0/24:*
+ExitPolicy reject 95.182.79.0/24:*
+ExitPolicy reject 141.136.16.0/24:*
+ExitPolicy reject 141.136.27.0/24:*
+ExitPolicy reject 176.97.116.0/22:*
+ExitPolicy reject 185.103.252.0/24:*
+ExitPolicy reject 185.106.92.0/24:*
+ExitPolicy reject 185.106.94.0/24:*
+ExitPolicy reject 185.112.102.0/24:*
+ExitPolicy reject 185.112.103.0/24:*
+ExitPolicy reject 185.112.80.0/24:*
+ExitPolicy reject 185.112.81.0/24:*
+ExitPolicy reject 185.127.24.0/22:*
+ExitPolicy reject 185.130.4.0/22:*
+ExitPolicy reject 185.130.6.0/24:*
+ExitPolicy reject 185.130.7.0/24:*
+ExitPolicy reject 185.137.219.0/24:*
+ExitPolicy reject 185.154.20.0/22:*
+ExitPolicy reject 185.35.136.0/22:*
+ExitPolicy reject 185.75.56.0/22:*
+ExitPolicy reject 188.247.135.0/24:*
+ExitPolicy reject 188.247.230.0/24:*
+ExitPolicy reject 188.247.232.0/24:*
+ExitPolicy reject 193.0.129.0/24:*
+ExitPolicy reject 193.104.41.0/24:*
+ExitPolicy reject 193.107.16.0/22:*
+ExitPolicy reject 193.138.244.0/22:*
+ExitPolicy reject 193.189.116.0/23:*
+ExitPolicy reject 194.1.152.0/24:*
+ExitPolicy reject 194.110.160.0/22:*
+ExitPolicy reject 194.29.185.0/24:*
+ExitPolicy reject 194.50.116.0/24:*
+ExitPolicy reject 194.31.59.0/24:*
+ExitPolicy reject 195.182.57.0/24:*
+ExitPolicy reject 195.190.13.0/24:*
+ExitPolicy reject 195.191.56.0/23:*
+ExitPolicy reject 195.20.141.0/24:*
+ExitPolicy reject 195.225.176.0/22:*
+ExitPolicy reject 195.88.190.0/23:*
+ExitPolicy reject 204.225.16.0/20:*
+ExitPolicy reject 212.56.214.0/24:*
+ExitPolicy reject 213.183.58.0/24:*
+ExitPolicy reject 5.8.37.0/24:*
+ExitPolicy reject 5.101.218.0/24:*
+ExitPolicy reject 5.101.221.0/24:*
+ExitPolicy reject 37.18.42.0/24:*
+ExitPolicy reject 37.230.212.0/23:*
+ExitPolicy reject 46.243.173.0/24:*
+ExitPolicy reject 79.110.17.0/24:*
+ExitPolicy reject 79.110.18.0/24:*
+ExitPolicy reject 79.110.19.0/24:*
+ExitPolicy reject 79.110.25.0/24:*
+ExitPolicy reject 93.179.89.0/24:*
+ExitPolicy reject 93.179.90.0/24:*
+ExitPolicy reject 93.179.91.0/24:*
+ExitPolicy reject 141.101.132.0/24:*
+ExitPolicy reject 141.101.201.0/24:*
+ExitPolicy reject 179.61.200.0/23:*
+ExitPolicy reject 185.2.32.0/24:*
+ExitPolicy reject 185.46.84.0/22:*
+ExitPolicy reject 185.50.250.0/24:*
+ExitPolicy reject 185.50.251.0/24:*
+ExitPolicy reject 188.72.96.0/24:*
+ExitPolicy reject 188.72.126.0/24:*
+ExitPolicy reject 188.72.127.0/24:*
+ExitPolicy reject 191.101.54.0/23:*
+ExitPolicy reject 31.28.27.7/32:*
+ExitPolicy reject 83.217.8.155/32:*
+ExitPolicy reject 86.104.134.144/32:*
+ExitPolicy reject 91.108.176.118/32:*
+ExitPolicy reject 91.108.176.129/32:*
+ExitPolicy reject 91.230.211.26/32:*
+ExitPolicy reject 91.230.211.139/32:*
+ExitPolicy reject 91.230.211.206/32:*
+ExitPolicy reject 93.170.128.136/32:*
+ExitPolicy reject 93.170.130.147/32:*
+ExitPolicy reject 93.170.131.108/32:*
+ExitPolicy reject 109.237.111.168/32:*
+ExitPolicy reject 212.47.195.238/32:*
+ExitPolicy reject 217.69.139.160:*
+ExitPolicy reject 147.67.119.102:*
+ExitPolicy reject 62.67.194.130:*
+ExitPolicy reject 176.9.220.168:*
+ExitPolicy reject 82.165.37.26:*
+ExitPolicy reject 72.55.186.0/24:* #funio abuse
+ExitPolicy reject 174.142.230.0/24:* #funio abuse
+ExitPolicy reject 184.107.100.0/24:* #funio abuse
+ExitPolicy reject 184.107.101.0/24:* #funio abuse
+ExitPolicy reject 184.107.116.0/24:* #funio abuse
+ExitPolicy reject 108.163.147.0/24:* #funio abuse
+ExitPolicy reject 198.72.104.0/24:* #funio abuse
+ExitPolicy reject 67.205.125.0/24:* #funio abuse
+ExitPolicy reject 67.205.105.0/24:* #funio abuse
+ExitPolicy reject 184.107.95.0/24:* #funio abuse
+ExitPolicy reject 5.145.168.0/21:* #comvive abuse
+ExitPolicy reject 37.235.53.0/24:* #comvive abuse
+ExitPolicy reject 37.252.96.0/24:* #comvive abuse
+ExitPolicy reject 77.81.112.0/22:* #comvive abuse
+ExitPolicy reject 77.81.116.0/22:* #comvive abuse
+ExitPolicy reject 91.192.108.0/22:* #comvive abuse
+ExitPolicy reject 93.93.64.0/21:* #comvive abuse
+ExitPolicy reject 151.236.23.0/24:* #comvive abuse
+ExitPolicy reject 158.255.238.0/24:* #comvive abuse
+ExitPolicy reject 185.49.192.0/22:* #comvive abuse
+ExitPolicy reject 185.50.196.0/22:* #comvive abuse
+ExitPolicy reject 185.66.175.0/24:* #comvive abuse
+ExitPolicy reject 185.76.77.0/24:* #comvive abuse
+ExitPolicy reject 185.86.210.0/24:* #comvive abuse
+ExitPolicy reject 185.104.152.0/24:* #comvive abuse
+ExitPolicy reject 185.129.249.0/24:* #comvive abuse
+ExitPolicy reject 192.71.213.0/24:* #comvive abuse
+ExitPolicy reject 195.78.228.0/22:* #comvive abuse
+ExitPolicy reject 23.217.172.41:* #PSN
+ExitPolicy reject 23.217.173.70:* #PSN
+ExitPolicy reject 23.217.161.62:* #PSN
+ExitPolicy reject 23.217.161.153:* #PSN
+ExitPolicy reject 23.235.33.144:* #VAT PIN ABUSE
+ExitPolicy accept *:80
+ExitPolicy accept *:443
+ExitPolicy reject *:*
