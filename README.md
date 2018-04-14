@@ -11,10 +11,11 @@ Making it easier to run your own Tor Relay.
 # Options
 Would you like to setup a Web server to serve a Tor notice page of the setup/practices of said relay? (Y/N)
 - We highly recommend setting up a Web server to serve a Tor notice webpage, and we'll offer more web server install options later on.
-<br>
+
 -(I.E. Apache, Litespeed, Hiawatha, Caddy.)
 <br>
 -(Supported: NGINX)
+
 
 # Usage
 Log into your server via ssh and download the raw fastrelay.sh script and then execute it.<br>
