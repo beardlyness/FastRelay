@@ -17,10 +17,8 @@ Would you like to setup a Web server to serve a Tor notice page of the setup/pra
 - (Supported: NGINX)
 
 
-# Usage
-Log into your server via ssh and download the raw fastrelay.sh script and then execute it.<br>
-- `wget https://raw.githubusercontent.com/beardlyness/FastRelay/master/fastrelay.sh`<br>
-- `bash fastrelay.sh`
+# Example
+- `https://fastrelay.org/exitpages/v1/index.html`<br>
 
 # Notes
 If you have any questions feel free to email maintainer: `beard [AT] cryptoworld [DOT] is`
