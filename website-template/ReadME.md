@@ -18,7 +18,7 @@ Would you like to setup a Web server to serve a Tor notice page of the setup/pra
 
 
 # Example
-- `https://fastrelay.org/exitpages/v1/index.html`<br>
+- `[https://fastrelay.org!](https://fastrelay.org/exitpages/v1/index.html)`<br>
 
 # Notes
 If you have any questions feel free to email maintainer: `beard [AT] cryptoworld [DOT] is`
