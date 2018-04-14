@@ -1,0 +1,127 @@
+/* BODY CSS */
+body {
+  background-color: #9b59b6;
+  font-family: sans-serif;
+}
+
+/* CONTAINER CSS */
+div.main{
+  overflow:auto;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 4px 14px 1px rgba(50, 50, 50, 0.14);
+  box-sizing: border-box;
+  color: black;
+  line-height: 1.5;
+  margin: 2.5em auto 0;
+  max-width: 640px;
+  word-wrap: break-word;
+  padding: 30px 35px 30px 37px;
+}
+
+/* H2 CSS */
+h2 {
+
+  padding: 10px 10px 10px 10px;
+  line-height: 25px;
+  position: relative;
+  border-radius: 5px;
+  font-size: 28px;
+  word-wrap: break-word;
+  color: #1d1d1d;
+  display: inline;
+  vertical-align: middle;
+}
+
+/* P CSS */
+p {
+    line-height: 25px;
+    position: relative;
+    border-radius: 5px;
+    font-size: 18px;
+    word-wrap: break-word;
+}
+
+/* SMALL CSS */
+small {
+  line-height: 20px;
+  position: relative;
+  border-radius: 5px;
+  font-size: 12px;
+  word-wrap: break-word;
+  margin: 0.2em 0 2.0em auto;
+}
+
+/* CODE CSS */
+code {
+  background-color: #bdc3c7;
+  color: #9b59b6;
+  padding: 5px;
+  position: relative;
+  border-radius: 5px;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+/* A HERF CSS */
+a {
+  color: #8e44ad;
+  text-decoration: none;
+  -o-transition:.4s;
+  -ms-transition:.4s;
+  -moz-transition:.4s;
+  -webkit-transition:.4s;
+  transition:.4s;
+}
+
+a:hover {
+color: #27ae60;
+}
+
+/* PRE CSS */
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* LOGO CSS */
+.logo{
+    margin-top: 20px;
+    max-width: 15%;
+    max-height: 15%;
+    display: block;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.logo:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* MEDIA QUERY CSS */
+@media only screen and (max-width: 630px) {
+  pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 8px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+}
