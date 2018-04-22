@@ -19,8 +19,8 @@
 # description      :Open-Proxy setup helper for Tor.
 # author           :TorWorld A Project Under The Crypto World Foundation.
 # contributors     :Beardlyness, Lunar, KsaRedFx, SPMedia, NurdTurd
-# date             :04-13-2018
-# version          :0.1.2 Beta
+# date             :04-22-2018
+# version          :0.1.3 Beta
 # os               :Debian/Ubuntu
 # usage            :bash fastrelay.sh
 # notes            :If you have any problems feel free to email us: security [AT] torworld [DOT] org
@@ -43,9 +43,9 @@
     if
       echo -e "\033[92mPerforming upkeep of system packages.. \e[0m"
         upkeep
-        echo -e "\033[92mChecking software list..\e[0m"
+      echo -e "\033[92mChecking software list..\e[0m"
 
-      [ ! -x  /usr/bin/lsb_release ] || [ ! -x  /usr/bin/wget ] || [ ! -x  /usr/bin/curl ] || [ ! -x  /usr/bin/apt-transport-https ] || [ ! -x  /usr/bin/dirmngr ] || [ ! -x  /usr/bin/ca-certificates ] || [ ! -x  /usr/bin/dialog ] ; then
+      [ ! -x  /usr/bin/lsb_release ] || [ ! -x  /usr/bin/wget ] || [ ! -x  /usr/bin/apt-transport-https ] || [ ! -x  /usr/bin/dirmngr ] || [ ! -x  /usr/bin/ca-certificates ] || [ ! -x  /usr/bin/dialog ] ; then
 
         echo -e "\033[92mlsb_release: checking for software..\e[0m"
         echo -e "\033[34mInstalling lsb_release, Please Wait...\e[0m"
@@ -54,10 +54,6 @@
         echo -e "\033[92mwget: checking for software..\e[0m"
         echo -e "\033[34mInstalling wget, Please Wait...\e[0m"
           apt-get install wget
-
-        echo -e "\033[92mcurl: checking for software..\e[0m"
-        echo -e "\033[34mInstalling curl, Please Wait...\e[0m"
-          apt-get install curl
 
         echo -e "\033[92mapt-transport-https: checking for software..\e[0m"
         echo -e "\033[34mInstalling apt-transport-https, Please Wait...\e[0m"
@@ -108,7 +104,7 @@
               echo deb http://deb.torproject.org/torproject.org $flavor main > /etc/apt/sources.list.d/deb.torproject.list
               echo deb-src http://deb.torproject.org/torproject.org $flavor main >> /etc/apt/sources.list.d/deb.torproject.list
                 gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
-                gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+                gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
               echo "Performing upkeep.."
                 upkeep
                 echo "Installing Tor now.."
@@ -124,7 +120,7 @@
               echo deb http://deb.torproject.org/torproject.org tor-experimental-0.3.3.x-$flavor main >> /etc/apt/sources.list.d/deb.torproject.list
               echo deb-src http://deb.torproject.org/torproject.org tor-experimental-0.3.3.x-$flavor main >> /etc/apt/sources.list.d/deb.torproject.list
                 gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
-                gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+                gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
               echo "Performing upkeep.."
                 upkeep
                 echo "Installing Tor now.."
@@ -140,7 +136,7 @@
               echo deb http://deb.torproject.org/torproject.org tor-nightly-master-$flavor main >> /etc/apt/sources.list.d/deb.torproject.list
               echo deb-src http://deb.torproject.org/torproject.org tor-nightly-master-$flavor main >> /etc/apt/sources.list.d/deb.torproject.list
                 gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
-                gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+                gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
               echo "Performing upkeep.."
                 upkeep
                 echo "Installing Tor now.."
@@ -159,7 +155,7 @@
         [yY]|[yY][eE][sS])
               echo deb http://nginx.org/packages/$system/ $flavor nginx > /etc/apt/sources.list.d/tornginx.list
               echo deb-src http://nginx.org/packages/$system/ $flavor nginx >> /etc/apt/sources.list.d/tornginx.list
-                wget -4 https://nginx.org/keys/nginx_signing.key
+                wget https://nginx.org/keys/nginx_signing.key
                 apt-key add nginx_signing.key
               echo "Performing upkeep.."
                 upkeep
@@ -167,13 +163,13 @@
                 apt-get install nginx
                 service nginx status
               echo "Preventing Nginx from logging..."
-                curl -s "https://raw.githubusercontent.com/beardlyness/FastRelay/master/nginx/nginx.conf" > /etc/nginx/nginx.conf
+                wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/torworld/fastrelay/master/nginx/nginx.conf
               echo "Restarting the Nginx service..."
                 service nginx restart
-              echo "Grabbing fastexit-website-template from GitHub.."
-                wget -4 https://github.com/torworld/fastexit-website-template/archive/master.tar.gz -O - | tar -xz -C /usr/share/nginx/html/  && mv /usr/share/nginx/html/fastexit-website-template-master/* /usr/share/nginx/html/
+              echo "Grabbing fastrelay-website-template from GitHub.."
+                wget https://github.com/torworld/fastrelay-website-template/archive/master.tar.gz -O - | tar -xz -C /usr/share/nginx/html/  && mv /usr/share/nginx/html/fastrelay-website-template-master/* /usr/share/nginx/html/
               echo "Removing temporary files/folders.."
-                rm -rf /usr/share/nginx/html/fastexit-website-template-master*
+                rm -rf /usr/share/nginx/html/fastrelay-website-template-master*
             ;;
           [nN]|[nN][oO])
             echo "You have said no? We cannot work without your permission!"
@@ -218,13 +214,14 @@
 # Dialog for ExitPolicy selection.
             HEIGHT=20
             WIDTH=120
-            CHOICE_HEIGHT=2
+            CHOICE_HEIGHT=3
             BACKTITLE="TorWorld | FastRelay"
             TITLE="FastRelay ExitPolicy Setup"
             MENU="Choose one of the following ExitPolicy options:"
 
             OPTIONS=(1 "Reduced ExitPolicy"
-                     2 "Browser Only ExitPolicy")
+                     2 "Browser Only ExitPolicy"
+                     3 "NON-EXIT Policy")
 
             CHOICE=$(dialog --clear \
                             --backtitle "$BACKTITLE" \
@@ -238,11 +235,15 @@
                 case $CHOICE in
                         1)
                             echo "Loading in a Passive ExitPolicy.."
-                            curl -s "https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/passive.s02018041301.exitlist.txt" >> /etc/tor/torrc
+                              wget https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/passive.s02018041301.exitlist.txt -O ->> /etc/tor/torrc
                             ;;
                         2)
                             echo "Loading in a Browser Only ExitPolicy.."
-                            curl -s "https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/browser.s02018041301.exitlist.txt" >> /etc/tor/torrc
+                              wget https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/browser.s02018041301.exitlist.txt -O ->> /etc/tor/torrc
+                            ;;
+                        3)
+                          echo "Loading in NON-EXIT Policy"
+                            wget https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/nonexit.s02018042201.list.txt -O ->> /etc/tor/torrc
                             ;;
                 esac
               clear
