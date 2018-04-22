@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://github.com/beardlyness/FastRelay"><img src="https://fastrelay.org/images/onions/torworld-icon-3.png" alt="FastRelay" width="200"></a>
+  <a href="https://github.com/beardlyness/FastRelay"><img src="https://fastrelay.org/images/onions/torworld-icon-3.png" alt="FastRelay" width="400"></a>
  <br />
   FastRelay
 </h1>
