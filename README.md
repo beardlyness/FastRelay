@@ -1,12 +1,10 @@
-# FastRelay
+<h1 align="center">
+  <a href="https://github.com/beardlyness/FastRelay"><img src="https://fastrelay.org/images/onions/torworld-icon-3.png" alt="FastRelay" width="200"></a>
+ <br />
+  FastRelay
+</h1>
 
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
-[![Bash Shell](https://badges.frapsoft.com/bash/v1/bash.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
-<br>
-[![forthebadge](https://forthebadge.com/images/badges/built-by-neckbeards.svg)](https://forthebadge.com)
-
-
-Making it easier to run your own Tor Relay.
+<p align="center">Making it easier to run your own Tor Relay.</p>
 
 # Options
 Would you like to setup a Web server to serve a Tor notice page of the setup/practices of said relay? (Y/N)
