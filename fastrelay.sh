@@ -19,8 +19,8 @@
 # description      :Open-Proxy setup helper for Tor.
 # author           :TorWorld A Project Under The Crypto World Foundation.
 # contributors     :Beardlyness, Lunar, KsaRedFx, SPMedia, NurdTurd
-# date             :04-22-2018
-# version          :0.1.3 Beta
+# date             :04-23-2018
+# version          :0.1.4 Beta
 # os               :Debian/Ubuntu
 # usage            :bash fastrelay.sh
 # notes            :If you have any problems feel free to email us: security [AT] torworld [DOT] org
@@ -31,6 +31,33 @@
       apt-get update -y
       apt-get dist-upgrade -y
       apt-get clean -y
+    }
+
+# Setting up a Tor installer + status check with hault
+    function torstall() {
+      apt-get install tor
+      service tor status
+      service tor stop
+    }
+
+# Setting up different Tor branches to prep for install
+    stable(){
+      echo deb http://deb.torproject.org/torproject.org $flavor main > /etc/apt/sources.list.d/repo.torproject.list
+      echo deb-src http://deb.torproject.org/torproject.org $flavor main >> /etc/apt/sources.list.d/repo.torproject.list
+        gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+        gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
+    }
+
+    experimental(){
+        stable
+      echo deb http://deb.torproject.org/torproject.org tor-experimental-0.3.3.x-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
+      echo deb-src http://deb.torproject.org/torproject.org tor-experimental-0.3.3.x-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
+    }
+
+    nightly(){
+        stable
+      echo deb http://deb.torproject.org/torproject.org tor-nightly-master-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
+      echo deb-src http://deb.torproject.org/torproject.org tor-nightly-master-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
     }
 
 # Grabbing info on active machine.
@@ -101,70 +128,48 @@
 # Attached Arg for dialogs $CHOICE output
             case $CHOICE in
               1)
-              echo deb http://deb.torproject.org/torproject.org $flavor main > /etc/apt/sources.list.d/deb.torproject.list
-              echo deb-src http://deb.torproject.org/torproject.org $flavor main >> /etc/apt/sources.list.d/deb.torproject.list
-                gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
-                gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
+              echo "Grabbing Stable build dependencies.."
+                stable
               echo "Performing upkeep.."
                 upkeep
-                echo "Installing Tor now.."
-                  apt-get install tor
-                echo "Getting status of Tor."
-                  service tor status
-                echo "Stopping Tor service.."
-                  service tor stop
+              echo "Performing torstall.."
+                torstall
                 ;;
               2)
-              echo deb http://deb.torproject.org/torproject.org $flavor main > /etc/apt/sources.list.d/deb.torproject.list
-              echo deb-src http://deb.torproject.org/torproject.org $flavor main >> /etc/apt/sources.list.d/deb.torproject.list
-              echo deb http://deb.torproject.org/torproject.org tor-experimental-0.3.3.x-$flavor main >> /etc/apt/sources.list.d/deb.torproject.list
-              echo deb-src http://deb.torproject.org/torproject.org tor-experimental-0.3.3.x-$flavor main >> /etc/apt/sources.list.d/deb.torproject.list
-                gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
-                gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
+              echo "Grabbing Experimental build dependencies.."
+                experimental
               echo "Performing upkeep.."
                 upkeep
-                echo "Installing Tor now.."
-                  apt-get install tor
-                echo "Getting status of Tor."
-                  service tor status
-                echo "Stopping Tor service.."
-                  service tor stop
+              echo "Performing torstall.."
+                torstall
                 ;;
               3)
-              echo deb http://deb.torproject.org/torproject.org $flavor main > /etc/apt/sources.list.d/deb.torproject.list
-              echo deb-src http://deb.torproject.org/torproject.org $flavor main >> /etc/apt/sources.list.d/deb.torproject.list
-              echo deb http://deb.torproject.org/torproject.org tor-nightly-master-$flavor main >> /etc/apt/sources.list.d/deb.torproject.list
-              echo deb-src http://deb.torproject.org/torproject.org tor-nightly-master-$flavor main >> /etc/apt/sources.list.d/deb.torproject.list
-                gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
-                gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
+              echo "Grabbing Nightly build dependencies.."
+                nightly
               echo "Performing upkeep.."
                 upkeep
-                echo "Installing Tor now.."
-                  apt-get install tor
-                echo "Getting status of Tor."
-                  service tor status
-                echo "Stopping Tor service.."
-                  service tor stop
+              echo "Performing torstall.."
+                torstall
                 ;;
             esac
         clear
 
-# Backlinking Nginx dependencies for APT.
-    read -r -p "Do you want to fetch the core Nginx dependencies, and install? (Y/N) " REPLY
+# Backlinking NGINX dependencies for APT.
+    read -r -p "Do you want to fetch the core NGINX dependencies, and install? (Y/N) " REPLY
       case "${REPLY,,}" in
         [yY]|[yY][eE][sS])
-              echo deb http://nginx.org/packages/$system/ $flavor nginx > /etc/apt/sources.list.d/tornginx.list
-              echo deb-src http://nginx.org/packages/$system/ $flavor nginx >> /etc/apt/sources.list.d/tornginx.list
+              echo deb http://nginx.org/packages/$system/ $flavor nginx > /etc/apt/sources.list.d/repo.nginx.list
+              echo deb-src http://nginx.org/packages/$system/ $flavor nginx >> /etc/apt/sources.list.d/repo.nginx.list
                 wget https://nginx.org/keys/nginx_signing.key
                 apt-key add nginx_signing.key
               echo "Performing upkeep.."
                 upkeep
-              echo "Installing Nginx now.."
+              echo "Installing NGINX now.."
                 apt-get install nginx
                 service nginx status
-              echo "Preventing Nginx from logging..."
+              echo "Preventing NGINX from logging..."
                 wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/torworld/fastrelay/master/nginx/nginx.conf
-              echo "Restarting the Nginx service..."
+              echo "Restarting the NGINX service..."
                 service nginx restart
               echo "Grabbing fastrelay-website-template from GitHub.."
                 wget https://github.com/torworld/fastrelay-website-template/archive/master.tar.gz -O - | tar -xz -C /usr/share/nginx/html/  && mv /usr/share/nginx/html/fastrelay-website-template-master/* /usr/share/nginx/html/
@@ -221,7 +226,7 @@
 
             OPTIONS=(1 "Reduced ExitPolicy"
                      2 "Browser Only ExitPolicy"
-                     3 "NON-EXIT Policy")
+                     3 "NON-Exit Policy")
 
             CHOICE=$(dialog --clear \
                             --backtitle "$BACKTITLE" \
@@ -242,8 +247,8 @@
                               wget https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/browser.s02018041301.exitlist.txt -O ->> /etc/tor/torrc
                             ;;
                         3)
-                          echo "Loading in NON-EXIT Policy"
-                            wget https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/nonexit.s02018042201.list.txt -O ->> /etc/tor/torrc
+                            echo "Loading in NON-EXIT Policy"
+                              wget https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/nonexit.s02018042201.list.txt -O ->> /etc/tor/torrc
                             ;;
                 esac
               clear
@@ -257,6 +262,26 @@
                 else
                   echo "Invalid."
               fi
+
+# Setup Arg for PIP+Nyx
+    read -r -p "Do you wish to install Nyx to monitor your Tor Relay? (Y/N) " REPLY
+      case "${REPLY,,}" in
+        [yY]|[yY][eE][sS])
+              echo "Setting up Python-PIP in order to install Nyx.."
+                apt-get install python-pip
+                pip install nyx
+              echo -e "ControlPort 9051\nCookieAuthentication 1\n" >> /etc/tor/torrc
+              echo "Performing upkeep.."
+                upkeep
+                service tor restart
+            ;;
+          [nN]|[nN][oO])
+            echo "You have said no? We cannot work without your permission!"
+            ;;
+          *)
+            echo "Invalid response. You okay?"
+            ;;
+      esac
 
 # End statement
         echo -e "\e[5m" "\033[92mThat's all folks..\e[0m"
