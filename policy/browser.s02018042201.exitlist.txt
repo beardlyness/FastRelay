@@ -1,0 +1,534 @@
+ExitPolicy reject 5.157.0.0/18:* # https://www.spamhaus.org/sbl/query/SBL207485
+ExitPolicy reject 5.188.216.0/24:* # https://www.spamhaus.org/sbl/query/SBL394632
+ExitPolicy reject 31.11.43.0/24:* # https://www.spamhaus.org/sbl/query/SBL113323
+ExitPolicy reject 37.139.49.0/24:* # https://www.spamhaus.org/sbl/query/SBL169644
+ExitPolicy reject 37.9.42.0/24:* # https://www.spamhaus.org/sbl/query/SBL394633
+ExitPolicy reject 37.9.53.0/24:* # https://www.spamhaus.org/sbl/query/SBL273113
+ExitPolicy reject 46.148.112.0/24:* # https://www.spamhaus.org/sbl/query/SBL394634
+ExitPolicy reject 46.148.120.0/24:* # https://www.spamhaus.org/sbl/query/SBL394635
+ExitPolicy reject 46.148.127.0/24:* # https://www.spamhaus.org/sbl/query/SBL394636
+ExitPolicy reject 46.161.56.0/24:* # https://www.spamhaus.org/sbl/query/SBL394637
+ExitPolicy reject 46.161.57.0/24:* # https://www.spamhaus.org/sbl/query/SBL394638
+ExitPolicy reject 46.161.58.0/24:* # https://www.spamhaus.org/sbl/query/SBL394639
+ExitPolicy reject 46.161.59.0/24:* # https://www.spamhaus.org/sbl/query/SBL394640
+ExitPolicy reject 46.161.60.0/24:* # https://www.spamhaus.org/sbl/query/SBL394641
+ExitPolicy reject 46.161.61.0/24:* # https://www.spamhaus.org/sbl/query/SBL394642
+ExitPolicy reject 46.161.62.0/24:* # https://www.spamhaus.org/sbl/query/SBL394643
+ExitPolicy reject 46.161.63.0/24:* # https://www.spamhaus.org/sbl/query/SBL394644
+ExitPolicy reject 46.243.140.0/24:* # https://www.spamhaus.org/sbl/query/SBL244638
+ExitPolicy reject 46.243.142.0/24:* # https://www.spamhaus.org/sbl/query/SBL244637
+ExitPolicy reject 46.243.173.0/24:* # https://www.spamhaus.org/sbl/query/SBL394645
+ExitPolicy reject 46.29.248.0/21:* # https://www.spamhaus.org/sbl/query/SBL216916
+ExitPolicy reject 46.8.255.0/24:* # https://www.spamhaus.org/sbl/query/SBL295496
+ExitPolicy reject 47.104.0.0/13:* # https://www.spamhaus.org/sbl/query/SBL331919 - Necurs C&C in this range
+ExitPolicy reject 49.12.0.0/16:* # https://www.spamhaus.org/sbl/query/SBL381541
+ExitPolicy reject 49.13.0.0/16:* # https://www.spamhaus.org/sbl/query/SBL381542
+ExitPolicy reject 79.110.22.0/24:* # https://www.spamhaus.org/sbl/query/SBL394646
+ExitPolicy reject 79.133.107.0/24:* # https://www.spamhaus.org/sbl/query/SBL394647
+ExitPolicy reject 81.94.43.0/24:* # https://www.spamhaus.org/sbl/query/SBL131095
+ExitPolicy reject 83.217.11.0/24:* # https://www.spamhaus.org/sbl/query/SBL368775
+ExitPolicy reject 84.19.170.240/28:* # https://www.spamhaus.org/sbl/query/SBL291886
+ExitPolicy reject 85.121.39.0/24:* # https://www.spamhaus.org/sbl/query/SBL111502
+ExitPolicy reject 85.93.5.0/24:* # https://www.spamhaus.org/sbl/query/SBL308886
+ExitPolicy reject 91.200.12.0/22:* # https://www.spamhaus.org/sbl/query/SBL190623
+ExitPolicy reject 91.200.164.0/24:* # https://www.spamhaus.org/sbl/query/SBL394651
+ExitPolicy reject 91.200.81.0/24:* # https://www.spamhaus.org/sbl/query/SBL394648
+ExitPolicy reject 91.200.82.0/24:* # https://www.spamhaus.org/sbl/query/SBL394649
+ExitPolicy reject 91.200.83.0/24:* # https://www.spamhaus.org/sbl/query/SBL394650
+ExitPolicy reject 91.207.4.0/22:* # https://www.spamhaus.org/sbl/query/SBL253216
+ExitPolicy reject 91.207.7.0/24:* # https://www.spamhaus.org/sbl/query/SBL194244
+ExitPolicy reject 91.209.12.0/24:* # https://www.spamhaus.org/sbl/query/SBL323108
+ExitPolicy reject 91.212.124.0/24:* # https://www.spamhaus.org/sbl/query/SBL291403
+ExitPolicy reject 91.213.126.0/24:* # https://www.spamhaus.org/sbl/query/SBL182148
+ExitPolicy reject 91.216.3.0/24:* # https://www.spamhaus.org/sbl/query/SBL394652
+ExitPolicy reject 91.217.10.0/23:* # https://www.spamhaus.org/sbl/query/SBL253218
+ExitPolicy reject 91.220.101.0/24:* # https://www.spamhaus.org/sbl/query/SBL291410
+ExitPolicy reject 91.220.163.0/24:* # https://www.spamhaus.org/sbl/query/SBL179440
+ExitPolicy reject 91.220.62.0/24:* # https://www.spamhaus.org/sbl/query/SBL180556
+ExitPolicy reject 91.224.160.0/23:* # https://www.spamhaus.org/sbl/query/SBL329623
+ExitPolicy reject 91.225.216.0/22:* # https://www.spamhaus.org/sbl/query/SBL302578
+ExitPolicy reject 91.226.92.0/22:* # https://www.spamhaus.org/sbl/query/SBL290679
+ExitPolicy reject 91.230.252.0/23:* # https://www.spamhaus.org/sbl/query/SBL214056
+ExitPolicy reject 91.235.2.0/24:* # https://www.spamhaus.org/sbl/query/SBL153758
+ExitPolicy reject 91.236.74.0/23:* # https://www.spamhaus.org/sbl/query/SBL176147
+ExitPolicy reject 91.238.82.0/24:* # https://www.spamhaus.org/sbl/query/SBL154617
+ExitPolicy reject 91.243.90.0/24:* # https://www.spamhaus.org/sbl/query/SBL394653
+ExitPolicy reject 91.243.91.0/24:* # https://www.spamhaus.org/sbl/query/SBL394654
+ExitPolicy reject 91.243.93.0/24:* # https://www.spamhaus.org/sbl/query/SBL394655
+ExitPolicy reject 93.179.88.0/24:* # https://www.spamhaus.org/sbl/query/SBL394656
+ExitPolicy reject 95.181.176.0/24:* # https://www.spamhaus.org/sbl/query/SBL394659
+ExitPolicy reject 95.181.177.0/24:* # https://www.spamhaus.org/sbl/query/SBL394660
+ExitPolicy reject 95.181.182.0/24:* # https://www.spamhaus.org/sbl/query/SBL394661
+ExitPolicy reject 95.181.183.0/24:* # https://www.spamhaus.org/sbl/query/SBL394662
+ExitPolicy reject 95.181.216.0/24:* # https://www.spamhaus.org/sbl/query/SBL394663
+ExitPolicy reject 95.181.217.0/24:* # https://www.spamhaus.org/sbl/query/SBL394664
+ExitPolicy reject 95.181.219.0/24:* # https://www.spamhaus.org/sbl/query/SBL394665
+ExitPolicy reject 95.182.79.0/24:* # https://www.spamhaus.org/sbl/query/SBL288322
+ExitPolicy reject 95.85.80.0/24:* # https://www.spamhaus.org/sbl/query/SBL394657
+ExitPolicy reject 95.85.81.0/24:* # https://www.spamhaus.org/sbl/query/SBL394658
+ExitPolicy reject 103.215.80.0/22:* # https://www.spamhaus.org/sbl/query/SBL337302
+ExitPolicy reject 103.63.0.0/22:* # https://www.spamhaus.org/sbl/query/SBL361680
+ExitPolicy reject 113.212.64.0/19:* # https://www.spamhaus.org/sbl/query/SBL289342
+ExitPolicy reject 141.101.132.0/24:* # https://www.spamhaus.org/sbl/query/SBL394666
+ExitPolicy reject 141.101.201.0/24:* # https://www.spamhaus.org/sbl/query/SBL394667
+ExitPolicy reject 141.136.27.0/24:* # https://www.spamhaus.org/sbl/query/SBL117320
+ExitPolicy reject 146.185.200.0/24:* # https://www.spamhaus.org/sbl/query/SBL394668
+ExitPolicy reject 146.185.201.0/24:* # https://www.spamhaus.org/sbl/query/SBL394669
+ExitPolicy reject 146.185.202.0/24:* # https://www.spamhaus.org/sbl/query/SBL394672
+ExitPolicy reject 146.185.203.0/24:* # https://www.spamhaus.org/sbl/query/SBL394673
+ExitPolicy reject 146.185.204.0/24:* # https://www.spamhaus.org/sbl/query/SBL394674
+ExitPolicy reject 146.185.205.0/24:* # https://www.spamhaus.org/sbl/query/SBL394675
+ExitPolicy reject 146.185.206.0/24:* # https://www.spamhaus.org/sbl/query/SBL394676
+ExitPolicy reject 150.129.40.0/22:* # https://www.spamhaus.org/sbl/query/SBL250160 - Vawtrak C&C in this range
+ExitPolicy reject 151.237.176.0/20:* # https://www.spamhaus.org/sbl/query/SBL216919
+ExitPolicy reject 159.174.0.0/16:* # https://www.spamhaus.org/sbl/query/SBL240976
+ExitPolicy reject 172.80.0.0/17:* # https://www.spamhaus.org/sbl/query/SBL261891 - Kraken C&C in this range
+ExitPolicy reject 176.53.112.0/20:* # https://www.spamhaus.org/sbl/query/SBL386103 - Ramnit C&C in this range
+ExitPolicy reject 176.97.116.0/22:* # https://www.spamhaus.org/sbl/query/SBL267875
+ExitPolicy reject 178.159.97.0/24:* # https://www.spamhaus.org/sbl/query/SBL394681
+ExitPolicy reject 178.16.80.0/20:* # https://www.spamhaus.org/sbl/query/SBL273180
+ExitPolicy reject 178.57.65.0/24:* # https://www.spamhaus.org/sbl/query/SBL394677
+ExitPolicy reject 178.57.66.0/24:* # https://www.spamhaus.org/sbl/query/SBL394678
+ExitPolicy reject 178.57.67.0/24:* # https://www.spamhaus.org/sbl/query/SBL394679
+ExitPolicy reject 178.57.68.0/24:* # https://www.spamhaus.org/sbl/query/SBL394680
+ExitPolicy reject 179.61.200.0/23:* # https://www.spamhaus.org/sbl/query/SBL394682
+ExitPolicy reject 181.214.37.0/24:* # https://www.spamhaus.org/sbl/query/SBL394683
+ExitPolicy reject 181.215.39.0/24:* # https://www.spamhaus.org/sbl/query/SBL394706
+ExitPolicy reject 185.101.68.0/24:* # https://www.spamhaus.org/sbl/query/SBL394690
+ExitPolicy reject 185.101.71.0/24:* # https://www.spamhaus.org/sbl/query/SBL394692
+ExitPolicy reject 185.103.252.0/23:* # https://www.spamhaus.org/sbl/query/SBL295234
+ExitPolicy reject 185.106.104.0/23:* # https://www.spamhaus.org/sbl/query/SBL394693
+ExitPolicy reject 185.106.92.0/24:* # https://www.spamhaus.org/sbl/query/SBL295232
+ExitPolicy reject 185.106.94.0/24:* # https://www.spamhaus.org/sbl/query/SBL277629
+ExitPolicy reject 185.112.102.0/24:* # https://www.spamhaus.org/sbl/query/SBL295231
+ExitPolicy reject 185.115.140.0/24:* # https://www.spamhaus.org/sbl/query/SBL391033
+ExitPolicy reject 185.127.24.0/22:* # https://www.spamhaus.org/sbl/query/SBL285817
+ExitPolicy reject 185.129.148.0/23:* # https://www.spamhaus.org/sbl/query/SBL343332
+ExitPolicy reject 185.129.148.0/23:* # https://www.spamhaus.org/sbl/query/SBL343332
+ExitPolicy reject 185.137.219.0/24:* # https://www.spamhaus.org/sbl/query/SBL306093
+ExitPolicy reject 185.14.192.0/24:* # https://www.spamhaus.org/sbl/query/SBL394686
+ExitPolicy reject 185.14.193.0/24:* # https://www.spamhaus.org/sbl/query/SBL394687
+ExitPolicy reject 185.14.195.0/24:* # https://www.spamhaus.org/sbl/query/SBL394688
+ExitPolicy reject 185.146.168.0/22:* # https://www.spamhaus.org/sbl/query/SBL301537
+ExitPolicy reject 185.154.20.0/22:* # https://www.spamhaus.org/sbl/query/SBL308825
+ExitPolicy reject 185.159.36.0/22:* # https://www.spamhaus.org/sbl/query/SBL341230
+ExitPolicy reject 185.169.228.0/22:* # https://www.spamhaus.org/sbl/query/SBL338645
+ExitPolicy reject 185.2.32.0/24:* # https://www.spamhaus.org/sbl/query/SBL394685
+ExitPolicy reject 185.71.0.0/22:* # https://www.spamhaus.org/sbl/query/SBL394689
+ExitPolicy reject 188.247.135.0/24:* # https://www.spamhaus.org/sbl/query/SBL117319
+ExitPolicy reject 188.247.230.0/24:* # https://www.spamhaus.org/sbl/query/SBL122292
+ExitPolicy reject 188.247.232.0/24:* # https://www.spamhaus.org/sbl/query/SBL122298
+ExitPolicy reject 188.68.0.0/24:* # https://www.spamhaus.org/sbl/query/SBL394695
+ExitPolicy reject 188.68.1.0/24:* # https://www.spamhaus.org/sbl/query/SBL394696
+ExitPolicy reject 188.68.3.0/24:* # https://www.spamhaus.org/sbl/query/SBL394697
+ExitPolicy reject 188.72.126.0/24:* # https://www.spamhaus.org/sbl/query/SBL394699
+ExitPolicy reject 188.72.127.0/24:* # https://www.spamhaus.org/sbl/query/SBL394700
+ExitPolicy reject 188.72.96.0/24:* # https://www.spamhaus.org/sbl/query/SBL394698
+ExitPolicy reject 191.101.24.0/24:* # https://www.spamhaus.org/sbl/query/SBL394701
+ExitPolicy reject 191.101.54.0/23:* # https://www.spamhaus.org/sbl/query/SBL394702
+ExitPolicy reject 191.96.170.0/24:* # https://www.spamhaus.org/sbl/query/SBL394707
+ExitPolicy reject 191.96.174.0/24:* # https://www.spamhaus.org/sbl/query/SBL394708
+ExitPolicy reject 193.105.171.0/24:* # https://www.spamhaus.org/sbl/query/SBL394705
+ExitPolicy reject 193.138.244.0/22:* # https://www.spamhaus.org/sbl/query/SBL256452
+ExitPolicy reject 193.93.192.0/24:* # https://www.spamhaus.org/sbl/query/SBL394703
+ExitPolicy reject 193.93.195.0/24:* # https://www.spamhaus.org/sbl/query/SBL394704
+ExitPolicy reject 194.29.185.0/24:* # https://www.spamhaus.org/sbl/query/SBL134638
+ExitPolicy reject 195.182.57.0/24:* # https://www.spamhaus.org/sbl/query/SBL88206
+ExitPolicy reject 195.190.13.0/24:* # https://www.spamhaus.org/sbl/query/SBL253217
+ExitPolicy reject 195.191.56.0/23:* # https://www.spamhaus.org/sbl/query/SBL193031
+ExitPolicy reject 195.225.176.0/22:* # https://www.spamhaus.org/sbl/query/SBL47622
+ExitPolicy reject 204.225.16.0/20:* # https://www.spamhaus.org/sbl/query/SBL156998
+ExitPolicy reject 212.92.127.0/24:* # https://www.spamhaus.org/sbl/query/SBL352250
+
+ExitPolicy reject 46.8.44.0/23:* # https://www.spamhaus.org/pbl/query/PBL1654859 - Locky C&C in this range
+ExitPolicy reject 46.98.64.0/18:* # https://www.spamhaus.org/pbl/query/PBL1534469 - Necurs C&C in this range
+ExitPolicy reject 68.119.232.0/21:* # https://www.spamhaus.org/pbl/query/PBL207755 - Necurs C&C in this range
+ExitPolicy reject 68.215.0.0/16:* # https://www.spamhaus.org/pbl/query/PBL033165 - Necurs C&C in this range
+ExitPolicy reject 69.244.0.0/14:* # https://www.spamhaus.org/pbl/query/PBL1523194 - Necurs C&C in this range
+ExitPolicy reject 70.111.0.0/16:* # https://www.spamhaus.org/pbl/query/PBL397512 - Necurs C&C in this range
+ExitPolicy reject 70.126.0.0/15:* # https://www.spamhaus.org/pbl/query/PBL238326 - Necurs C&C in this range
+ExitPolicy reject 112.78.2.0/24:* # https://www.spamhaus.org/pbl/query/PBL1667740 / SBL391367
+ExitPolicy reject 193.9.28.0/24:* # https://www.spamhaus.org/pbl/query/PBL1670080 - Locky C&C in this range
+ExitPolicy reject 195.20.40.0/21:* # https://www.spamhaus.org/pbl/query/PBL1625371 - ZeuS C&C in this range
+
+ExitPolicy reject 5.8.37.0/24:* # https://www.spamhaus.org/sbl/query/SBL284078 - Suspect network: (AS199793)
+ExitPolicy reject 5.101.218.0/24:* # https://www.spamhaus.org/sbl/query/SBL284076 - Suspect network: (AS199793)
+ExitPolicy reject 5.101.221.0/24:* # https://www.spamhaus.org/sbl/query/SBL284077 - Suspect network: (AS199793)
+ExitPolicy reject 79.110.17.0/24:* # https://www.spamhaus.org/sbl/query/SBL284079 - Suspect network: (AS199793)
+ExitPolicy reject 79.110.18.0/24:* # https://www.spamhaus.org/sbl/query/SBL284080 - Suspect network: (AS199793)
+ExitPolicy reject 79.110.19.0/24:* # https://www.spamhaus.org/sbl/query/SBL284081 - Suspect network: (AS199793)
+ExitPolicy reject 79.110.25.0/24:* # https://www.spamhaus.org/sbl/query/SBL284082 - Suspect network: (AS199793)
+ExitPolicy reject 93.179.89.0/24:* # https://www.spamhaus.org/sbl/query/SBL284085 - Suspect network: (AS199793)
+ExitPolicy reject 93.179.90.0/24:* # https://www.spamhaus.org/sbl/query/SBL284084 - Suspect network: (AS199793)
+ExitPolicy reject 93.179.91.0/24:* # https://www.spamhaus.org/sbl/query/SBL284086 - Suspect network: (AS199793)
+ExitPolicy reject 185.46.84.0/22:* # https://www.spamhaus.org/sbl/query/SBL284065 - Suspect network: (AS199793)
+ExitPolicy reject 185.50.250.0/24:* # https://www.spamhaus.org/sbl/query/SBL284066 - Suspect network: (AS199793)
+ExitPolicy reject 185.50.251.0/24:* # https://www.spamhaus.org/sbl/query/SBL284067 - Suspect network: (AS199793)
+ExitPolicy reject 193.9.158.0/24:* # https://www.spamhaus.org/sbl/query/SBL284072 - Suspect network: (AS199793)
+
+ExitPolicy reject 5.157.38.50/32:* # https://www.spamhaus.org/sbl/query/SBL310484
+ExitPolicy reject 5.196.26.96/32:* # https://www.spamhaus.org/sbl/query/SBL392053
+ExitPolicy reject 23.235.209.11/32:* # https://www.spamhaus.org/sbl/query/SBL379556
+ExitPolicy reject 23.92.87.202/32:* # https://www.spamhaus.org/sbl/query/SBL384201
+ExitPolicy reject 27.254.151.81/32:* # https://www.spamhaus.org/sbl/query/SBL342604
+ExitPolicy reject 27.254.152.29/32:* # https://www.spamhaus.org/sbl/query/SBL319186
+ExitPolicy reject 27.254.40.113/32:* # https://www.spamhaus.org/sbl/query/SBL255794
+ExitPolicy reject 27.254.41.206/32:* # https://www.spamhaus.org/sbl/query/SBL338970
+ExitPolicy reject 27.254.44.105/32:* # https://www.spamhaus.org/sbl/query/SBL337171
+ExitPolicy reject 27.254.61.110/32:* # https://www.spamhaus.org/sbl/query/SBL335100
+ExitPolicy reject 27.254.85.27/32:* # https://www.spamhaus.org/sbl/query/SBL291369
+ExitPolicy reject 27.254.85.49/32:* # https://www.spamhaus.org/sbl/query/SBL334629
+ExitPolicy reject 36.39.155.98/32:* # https://www.spamhaus.org/sbl/query/SBL284643
+ExitPolicy reject 36.66.209.21/32:* # https://www.spamhaus.org/sbl/query/SBL334961
+ExitPolicy reject 36.72.228.22/32:* # https://www.spamhaus.org/sbl/query/SBL273591
+ExitPolicy reject 36.76.176.64/32:* # https://www.spamhaus.org/sbl/query/SBL385589
+ExitPolicy reject 37.203.213.110/32:* # https://www.spamhaus.org/sbl/query/SBL344033
+ExitPolicy reject 46.26.129.203/32:* # https://www.spamhaus.org/sbl/query/SBL385323
+ExitPolicy reject 46.34.160.34/32:* # https://www.spamhaus.org/sbl/query/SBL392882
+ExitPolicy reject 50.118.100.49/32:* # https://www.spamhaus.org/sbl/query/SBL391256
+ExitPolicy reject 54.37.96.109/32:* # https://www.spamhaus.org/sbl/query/SBL384099
+ExitPolicy reject 58.195.1.4/32:* # https://www.spamhaus.org/sbl/query/SBL226820
+ExitPolicy reject 59.157.4.2/32:* # https://www.spamhaus.org/sbl/query/SBL194747
+ExitPolicy reject 60.13.186.5/32:* # https://www.spamhaus.org/sbl/query/SBL136391
+ExitPolicy reject 60.241.184.209/32:* # https://www.spamhaus.org/sbl/query/SBL251199
+ExitPolicy reject 62.75.132.67/32:* # https://www.spamhaus.org/sbl/query/SBL374353
+ExitPolicy reject 63.249.152.74/32:* # https://www.spamhaus.org/sbl/query/SBL271864
+ExitPolicy reject 64.127.71.73/32:* # https://www.spamhaus.org/sbl/query/SBL152691
+ExitPolicy reject 64.182.6.61/32:* # https://www.spamhaus.org/sbl/query/SBL270756
+ExitPolicy reject 64.85.233.8/32:* # https://www.spamhaus.org/sbl/query/SBL188358
+ExitPolicy reject 66.117.5.245/32:* # https://www.spamhaus.org/sbl/query/SBL384872
+ExitPolicy reject 66.70.134.137/32:* # https://www.spamhaus.org/sbl/query/SBL391997
+ExitPolicy reject 66.70.190.236/32:* # https://www.spamhaus.org/sbl/query/SBL389281
+ExitPolicy reject 68.65.122.86/32:* # https://www.spamhaus.org/sbl/query/SBL344412
+ExitPolicy reject 74.124.194.43/32:* # https://www.spamhaus.org/sbl/query/SBL373510
+ExitPolicy reject 77.104.143.180/32:* # https://www.spamhaus.org/sbl/query/SBL329712
+ExitPolicy reject 77.227.184.45/32:* # https://www.spamhaus.org/sbl/query/SBL172129
+ExitPolicy reject 77.228.191.183/32:* # https://www.spamhaus.org/sbl/query/SBL233932
+ExitPolicy reject 78.108.82.18/32:* # https://www.spamhaus.org/sbl/query/SBL345505
+ExitPolicy reject 78.108.83.153/32:* # https://www.spamhaus.org/sbl/query/SBL383631
+ExitPolicy reject 78.108.87.155/32:* # https://www.spamhaus.org/sbl/query/SBL314728
+ExitPolicy reject 78.108.89.85/32:* # https://www.spamhaus.org/sbl/query/SBL377726
+ExitPolicy reject 78.108.93.91/32:* # https://www.spamhaus.org/sbl/query/SBL337628
+ExitPolicy reject 78.108.95.116/32:* # https://www.spamhaus.org/sbl/query/SBL381089
+ExitPolicy reject 78.108.95.207/32:* # https://www.spamhaus.org/sbl/query/SBL328196
+ExitPolicy reject 78.138.104.167/32:* # https://www.spamhaus.org/sbl/query/SBL226802
+ExitPolicy reject 78.138.88.232/32:* # https://www.spamhaus.org/sbl/query/SBL373199
+ExitPolicy reject 79.170.44.115/32:* # https://www.spamhaus.org/sbl/query/SBL391769
+ExitPolicy reject 79.187.34.150/32:* # https://www.spamhaus.org/sbl/query/SBL266871
+ExitPolicy reject 79.188.45.226/32:* # https://www.spamhaus.org/sbl/query/SBL266862
+ExitPolicy reject 80.48.160.146/32:* # https://www.spamhaus.org/sbl/query/SBL266662
+ExitPolicy reject 80.52.222.10/32:* # https://www.spamhaus.org/sbl/query/SBL258088
+ExitPolicy reject 80.65.93.241/32:* # https://www.spamhaus.org/sbl/query/SBL240664
+ExitPolicy reject 83.0.245.234/32:* # https://www.spamhaus.org/sbl/query/SBL378941
+ExitPolicy reject 83.1.195.232/32:* # https://www.spamhaus.org/sbl/query/SBL371678
+ExitPolicy reject 83.17.220.66/32:* # https://www.spamhaus.org/sbl/query/SBL230548
+ExitPolicy reject 83.212.110.172/32:* # https://www.spamhaus.org/sbl/query/SBL183618
+ExitPolicy reject 83.212.112.80/32:* # https://www.spamhaus.org/sbl/query/SBL178464
+ExitPolicy reject 83.212.117.233/32:* # https://www.spamhaus.org/sbl/query/SBL254879
+ExitPolicy reject 83.212.120.81/32:* # https://www.spamhaus.org/sbl/query/SBL183601
+ExitPolicy reject 83.220.128.111/32:* # https://www.spamhaus.org/sbl/query/SBL366523
+ExitPolicy reject 83.220.144.107/32:* # https://www.spamhaus.org/sbl/query/SBL346108
+ExitPolicy reject 83.220.144.30/32:* # https://www.spamhaus.org/sbl/query/SBL373194
+ExitPolicy reject 84.19.170.244/32:* # https://www.spamhaus.org/sbl/query/SBL291025
+ExitPolicy reject 84.19.170.249/32:* # https://www.spamhaus.org/sbl/query/SBL291885
+ExitPolicy reject 84.19.190.8/32:* # https://www.spamhaus.org/sbl/query/SBL338686
+ExitPolicy reject 84.19.191.164/32:* # https://www.spamhaus.org/sbl/query/SBL227162
+ExitPolicy reject 85.117.35.21/32:* # https://www.spamhaus.org/sbl/query/SBL356763
+ExitPolicy reject 85.25.185.254/32:* # https://www.spamhaus.org/sbl/query/SBL392539
+ExitPolicy reject 86.104.134.144/32:* # https://www.spamhaus.org/sbl/query/SBL286365
+ExitPolicy reject 87.118.102.19/32:* # https://www.spamhaus.org/sbl/query/SBL343383
+ExitPolicy reject 87.118.90.136/32:* # https://www.spamhaus.org/sbl/query/SBL224336
+ExitPolicy reject 87.119.194.135/32:* # https://www.spamhaus.org/sbl/query/SBL392357
+ExitPolicy reject 87.236.210.110/32:* # https://www.spamhaus.org/sbl/query/SBL228133
+ExitPolicy reject 87.236.210.124/32:* # https://www.spamhaus.org/sbl/query/SBL228910
+ExitPolicy reject 87.237.198.245/32:* # https://www.spamhaus.org/sbl/query/SBL242569
+ExitPolicy reject 87.246.143.242/32:* # https://www.spamhaus.org/sbl/query/SBL198524
+ExitPolicy reject 87.254.167.37/32:* # https://www.spamhaus.org/sbl/query/SBL143459
+ExitPolicy reject 89.232.63.147/32:* # https://www.spamhaus.org/sbl/query/SBL216562
+ExitPolicy reject 91.108.176.118/32:* # https://www.spamhaus.org/sbl/query/SBL285403
+ExitPolicy reject 91.121.78.51/32:* # https://www.spamhaus.org/sbl/query/SBL391125
+ExitPolicy reject 91.201.202.12/32:* # https://www.spamhaus.org/sbl/query/SBL318901
+ExitPolicy reject 91.208.144.164/32:* # https://www.spamhaus.org/sbl/query/SBL298461
+ExitPolicy reject 92.36.213.75/32:* # https://www.spamhaus.org/sbl/query/SBL181744
+ExitPolicy reject 93.153.195.181/32:* # https://www.spamhaus.org/sbl/query/SBL354777
+ExitPolicy reject 93.170.128.136/32:* # https://www.spamhaus.org/sbl/query/SBL282379
+ExitPolicy reject 93.170.130.147/32:* # https://www.spamhaus.org/sbl/query/SBL286256
+ExitPolicy reject 93.170.131.108/32:* # https://www.spamhaus.org/sbl/query/SBL292211
+ExitPolicy reject 93.171.202.191/32:* # https://www.spamhaus.org/sbl/query/SBL334265
+ExitPolicy reject 93.65.43.220/32:* # https://www.spamhaus.org/sbl/query/SBL290705
+ExitPolicy reject 94.103.36.55/32:* # https://www.spamhaus.org/sbl/query/SBL141535
+ExitPolicy reject 95.169.184.25/32:* # https://www.spamhaus.org/sbl/query/SBL351014
+ExitPolicy reject 95.169.184.7/32:* # https://www.spamhaus.org/sbl/query/SBL316688
+ExitPolicy reject 95.169.190.104/32:* # https://www.spamhaus.org/sbl/query/SBL329108
+ExitPolicy reject 95.62.197.90/32:* # https://www.spamhaus.org/sbl/query/SBL332621
+ExitPolicy reject 96.31.35.51/32:* # https://www.spamhaus.org/sbl/query/SBL248699
+ExitPolicy reject 103.19.89.118/32:* # https://www.spamhaus.org/sbl/query/SBL255896
+ExitPolicy reject 103.230.84.239/32:* # https://www.spamhaus.org/sbl/query/SBL233517
+ExitPolicy reject 103.26.41.71/32:* # https://www.spamhaus.org/sbl/query/SBL374179
+ExitPolicy reject 103.4.52.150/32:* # https://www.spamhaus.org/sbl/query/SBL200191
+ExitPolicy reject 103.53.172.20/32:* # https://www.spamhaus.org/sbl/query/SBL345648
+ExitPolicy reject 103.53.172.96/32:* # https://www.spamhaus.org/sbl/query/SBL359636
+ExitPolicy reject 103.59.164.125/32:* # https://www.spamhaus.org/sbl/query/SBL368549
+ExitPolicy reject 103.7.56.119/32:* # https://www.spamhaus.org/sbl/query/SBL230544
+ExitPolicy reject 103.7.59.135/32:* # https://www.spamhaus.org/sbl/query/SBL191987
+ExitPolicy reject 103.221.222.65/32:* # https://www.spamhaus.org/sbl/query/SBL379022
+ExitPolicy reject 104.244.120.12/32:* # https://www.spamhaus.org/sbl/query/SBL350718
+ExitPolicy reject 104.247.76.199/32:* # https://www.spamhaus.org/sbl/query/SBL376680
+ExitPolicy reject 109.127.8.242/32:* # https://www.spamhaus.org/sbl/query/SBL116305
+ExitPolicy reject 109.127.8.246/32:* # https://www.spamhaus.org/sbl/query/SBL116304
+ExitPolicy reject 109.199.98.63/32:* # https://www.spamhaus.org/sbl/query/SBL260553
+ExitPolicy reject 109.229.210.250/32:* # https://www.spamhaus.org/sbl/query/SBL215826
+ExitPolicy reject 109.229.36.65/32:* # https://www.spamhaus.org/sbl/query/SBL184935
+ExitPolicy reject 109.237.111.168/32:* # https://www.spamhaus.org/sbl/query/SBL288362
+ExitPolicy reject 109.248.200.23/32:* # https://www.spamhaus.org/sbl/query/SBL384081
+ExitPolicy reject 110.138.108.142/32:* # https://www.spamhaus.org/sbl/query/SBL284194
+ExitPolicy reject 110.164.126.64/32:* # https://www.spamhaus.org/sbl/query/SBL210970
+ExitPolicy reject 110.164.205.225/32:* # https://www.spamhaus.org/sbl/query/SBL318705
+ExitPolicy reject 111.67.15.173/32:* # https://www.spamhaus.org/sbl/query/SBL180528
+ExitPolicy reject 111.67.16.254/32:* # https://www.spamhaus.org/sbl/query/SBL244845
+ExitPolicy reject 112.78.2.131/32:* # https://www.spamhaus.org/sbl/query/SBL391367 / PBL1667740
+ExitPolicy reject 112.78.2.31/32:* # https://www.spamhaus.org/sbl/query/SBL370725
+ExitPolicy reject 112.78.2.57/32:* # https://www.spamhaus.org/sbl/query/SBL363214
+ExitPolicy reject 112.78.2.99/32:* # https://www.spamhaus.org/sbl/query/SBL386094
+ExitPolicy reject 113.29.230.24/32:* # https://www.spamhaus.org/sbl/query/SBL250126
+ExitPolicy reject 115.146.59.207/32:* # https://www.spamhaus.org/sbl/query/SBL251755
+ExitPolicy reject 120.63.157.195/32:* # https://www.spamhaus.org/sbl/query/SBL233280
+ExitPolicy reject 120.63.175.225/32:* # https://www.spamhaus.org/sbl/query/SBL288566
+ExitPolicy reject 124.110.195.160/32:* # https://www.spamhaus.org/sbl/query/SBL253778
+ExitPolicy reject 128.210.157.251/32:* # https://www.spamhaus.org/sbl/query/SBL179979
+ExitPolicy reject 130.206.78.158/32:* # https://www.spamhaus.org/sbl/query/SBL180530
+ExitPolicy reject 137.74.6.95/32:* # https://www.spamhaus.org/sbl/query/SBL388245
+ExitPolicy reject 138.100.137.61/32:* # https://www.spamhaus.org/sbl/query/SBL188236
+ExitPolicy reject 143.225.116.108/32:* # https://www.spamhaus.org/sbl/query/SBL189907
+ExitPolicy reject 147.156.165.26/32:* # https://www.spamhaus.org/sbl/query/SBL285346
+ExitPolicy reject 148.163.100.151/32:* # https://www.spamhaus.org/sbl/query/SBL368831
+ExitPolicy reject 150.244.121.149/32:* # https://www.spamhaus.org/sbl/query/SBL184429
+ExitPolicy reject 151.97.190.239/32:* # https://www.spamhaus.org/sbl/query/SBL126259
+ExitPolicy reject 151.97.80.16/32:* # https://www.spamhaus.org/sbl/query/SBL257881
+ExitPolicy reject 154.66.197.59/32:* # https://www.spamhaus.org/sbl/query/SBL338101
+ExitPolicy reject 158.110.80.108/32:* # https://www.spamhaus.org/sbl/query/SBL244187
+ExitPolicy reject 158.69.255.67/32:* # https://www.spamhaus.org/sbl/query/SBL377746
+ExitPolicy reject 161.67.132.25/32:* # https://www.spamhaus.org/sbl/query/SBL193983
+ExitPolicy reject 162.223.94.56/32:* # https://www.spamhaus.org/sbl/query/SBL288050
+ExitPolicy reject 162.255.119.249/32:* # https://www.spamhaus.org/sbl/query/SBL377956
+ExitPolicy reject 172.81.119.140/32:* # https://www.spamhaus.org/sbl/query/SBL368990
+ExitPolicy reject 177.4.23.159/32:* # https://www.spamhaus.org/sbl/query/SBL252974
+ExitPolicy reject 177.70.107.137/32:* # https://www.spamhaus.org/sbl/query/SBL260548
+ExitPolicy reject 177.70.122.13/32:* # https://www.spamhaus.org/sbl/query/SBL251807
+ExitPolicy reject 177.70.122.193/32:* # https://www.spamhaus.org/sbl/query/SBL251808
+ExitPolicy reject 177.70.123.117/32:* # https://www.spamhaus.org/sbl/query/SBL259371
+ExitPolicy reject 177.70.123.128/32:* # https://www.spamhaus.org/sbl/query/SBL258752
+ExitPolicy reject 177.70.123.8/32:* # https://www.spamhaus.org/sbl/query/SBL261047
+ExitPolicy reject 177.70.123.90/32:* # https://www.spamhaus.org/sbl/query/SBL260547
+ExitPolicy reject 177.70.98.122/32:* # https://www.spamhaus.org/sbl/query/SBL264588
+ExitPolicy reject 177.70.98.242/32:* # https://www.spamhaus.org/sbl/query/SBL255394
+ExitPolicy reject 178.210.173.46/32:* # https://www.spamhaus.org/sbl/query/SBL303040
+ExitPolicy reject 178.250.241.22/32:* # https://www.spamhaus.org/sbl/query/SBL388974
+ExitPolicy reject 178.250.243.146/32:* # https://www.spamhaus.org/sbl/query/SBL330713
+ExitPolicy reject 178.250.245.138/32:* # https://www.spamhaus.org/sbl/query/SBL385492
+ExitPolicy reject 178.250.246.89/32:* # https://www.spamhaus.org/sbl/query/SBL310423
+ExitPolicy reject 178.32.255.132/32:* # https://www.spamhaus.org/sbl/query/SBL387201
+ExitPolicy reject 178.32.52.15/32:* # https://www.spamhaus.org/sbl/query/SBL392677
+ExitPolicy reject 180.182.234.200/32:* # https://www.spamhaus.org/sbl/query/SBL224649
+ExitPolicy reject 180.241.47.130/32:* # https://www.spamhaus.org/sbl/query/SBL171871
+ExitPolicy reject 180.250.210.23/32:* # https://www.spamhaus.org/sbl/query/SBL281511
+ExitPolicy reject 180.250.28.38/32:* # https://www.spamhaus.org/sbl/query/SBL284857
+ExitPolicy reject 181.136.26.124/32:* # https://www.spamhaus.org/sbl/query/SBL276910
+ExitPolicy reject 185.115.140.143/32:* # https://www.spamhaus.org/sbl/query/SBL369763
+ExitPolicy reject 185.115.140.170/32:* # https://www.spamhaus.org/sbl/query/SBL352400
+ExitPolicy reject 185.15.185.201/32:* # https://www.spamhaus.org/sbl/query/SBL256992
+ExitPolicy reject 185.15.185.209/32:* # https://www.spamhaus.org/sbl/query/SBL328382
+ExitPolicy reject 185.169.231.141/32:* # https://www.spamhaus.org/sbl/query/SBL342537
+ExitPolicy reject 185.19.92.70/32:* # https://www.spamhaus.org/sbl/query/SBL255039
+ExitPolicy reject 185.59.28.14/32:* # https://www.spamhaus.org/sbl/query/SBL293122
+ExitPolicy reject 185.61.152.30/32:* # https://www.spamhaus.org/sbl/query/SBL373464
+ExitPolicy reject 185.242.179.15/32:* # https://www.spamhaus.org/sbl/query/SBL391646
+ExitPolicy reject 185.242.179.16/32:* # https://www.spamhaus.org/sbl/query/SBL391645
+ExitPolicy reject 186.202.153.34/32:* # https://www.spamhaus.org/sbl/query/SBL377129
+ExitPolicy reject 186.64.122.105/32:* # https://www.spamhaus.org/sbl/query/SBL282923
+ExitPolicy reject 187.141.112.98/32:* # https://www.spamhaus.org/sbl/query/SBL276577
+ExitPolicy reject 187.141.12.161/32:* # https://www.spamhaus.org/sbl/query/SBL236684
+ExitPolicy reject 187.174.252.247/32:* # https://www.spamhaus.org/sbl/query/SBL234830
+ExitPolicy reject 188.218.158.126/32:* # https://www.spamhaus.org/sbl/query/SBL226342
+ExitPolicy reject 188.219.154.228/32:* # https://www.spamhaus.org/sbl/query/SBL120164
+ExitPolicy reject 188.240.2.93/32:* # https://www.spamhaus.org/sbl/query/SBL295514
+ExitPolicy reject 188.241.140.212/32:* # https://www.spamhaus.org/sbl/query/SBL255329
+ExitPolicy reject 188.241.140.222/32:* # https://www.spamhaus.org/sbl/query/SBL256957
+ExitPolicy reject 188.241.140.224/32:* # https://www.spamhaus.org/sbl/query/SBL258148
+ExitPolicy reject 188.84.140.44/32:* # https://www.spamhaus.org/sbl/query/SBL184270
+ExitPolicy reject 188.85.248.131/32:* # https://www.spamhaus.org/sbl/query/SBL260453
+ExitPolicy reject 190.128.122.234/32:* # https://www.spamhaus.org/sbl/query/SBL254456
+ExitPolicy reject 190.128.29.1/32:* # https://www.spamhaus.org/sbl/query/SBL217683
+ExitPolicy reject 190.15.192.25/32:* # https://www.spamhaus.org/sbl/query/SBL184233
+ExitPolicy reject 190.183.59.133/32:* # https://www.spamhaus.org/sbl/query/SBL241516
+ExitPolicy reject 190.7.28.147/32:* # https://www.spamhaus.org/sbl/query/SBL325626
+ExitPolicy reject 191.252.104.136/32:* # https://www.spamhaus.org/sbl/query/SBL361131
+ExitPolicy reject 191.252.128.181/32:* # https://www.spamhaus.org/sbl/query/SBL338832
+ExitPolicy reject 191.252.130.32/32:* # https://www.spamhaus.org/sbl/query/SBL376241
+ExitPolicy reject 191.252.132.201/32:* # https://www.spamhaus.org/sbl/query/SBL378759
+ExitPolicy reject 191.252.134.38/32:* # https://www.spamhaus.org/sbl/query/SBL361129
+ExitPolicy reject 191.252.135.80/32:* # https://www.spamhaus.org/sbl/query/SBL356270
+ExitPolicy reject 191.252.136.74/32:* # https://www.spamhaus.org/sbl/query/SBL372234
+ExitPolicy reject 191.252.140.148/32:* # https://www.spamhaus.org/sbl/query/SBL361029
+ExitPolicy reject 191.252.140.199/32:* # https://www.spamhaus.org/sbl/query/SBL377418
+ExitPolicy reject 191.252.140.212/32:* # https://www.spamhaus.org/sbl/query/SBL379404
+ExitPolicy reject 191.252.141.145/32:* # https://www.spamhaus.org/sbl/query/SBL357023
+ExitPolicy reject 191.252.142.98/32:* # https://www.spamhaus.org/sbl/query/SBL382950
+ExitPolicy reject 191.252.143.96/32:* # https://www.spamhaus.org/sbl/query/SBL349968
+ExitPolicy reject 191.252.2.161/32:* # https://www.spamhaus.org/sbl/query/SBL359620
+ExitPolicy reject 192.100.170.12/32:* # https://www.spamhaus.org/sbl/query/SBL286834
+ExitPolicy reject 192.64.11.244/32:* # https://www.spamhaus.org/sbl/query/SBL223790
+ExitPolicy reject 192.64.9.116/32:* # https://www.spamhaus.org/sbl/query/SBL223789
+ExitPolicy reject 192.99.37.46/32:* # https://www.spamhaus.org/sbl/query/SBL389387
+ExitPolicy reject 193.146.210.69/32:* # https://www.spamhaus.org/sbl/query/SBL255898
+ExitPolicy reject 193.218.145.184/32:* # https://www.spamhaus.org/sbl/query/SBL271156
+ExitPolicy reject 193.218.145.32/32:* # https://www.spamhaus.org/sbl/query/SBL300950
+ExitPolicy reject 193.218.145.50/32:* # https://www.spamhaus.org/sbl/query/SBL293060
+ExitPolicy reject 194.144.188.70/32:* # https://www.spamhaus.org/sbl/query/SBL240338
+ExitPolicy reject 195.117.119.187/32:* # https://www.spamhaus.org/sbl/query/SBL273562
+ExitPolicy reject 195.205.24.101/32:* # https://www.spamhaus.org/sbl/query/SBL391254
+ExitPolicy reject 198.50.173.86/32:* # https://www.spamhaus.org/sbl/query/SBL391950
+ExitPolicy reject 198.54.126.39/32:* # https://www.spamhaus.org/sbl/query/SBL383636
+ExitPolicy reject 199.187.129.193/32:* # https://www.spamhaus.org/sbl/query/SBL220691
+ExitPolicy reject 199.201.121.169/32:* # https://www.spamhaus.org/sbl/query/SBL252096
+ExitPolicy reject 199.201.121.185/32:* # https://www.spamhaus.org/sbl/query/SBL221832
+ExitPolicy reject 199.246.2.104/32:* # https://www.spamhaus.org/sbl/query/SBL319849
+ExitPolicy reject 199.7.234.100/32:* # https://www.spamhaus.org/sbl/query/SBL185564
+ExitPolicy reject 200.0.24.42/32:* # https://www.spamhaus.org/sbl/query/SBL219217
+ExitPolicy reject 200.116.206.58/32:* # https://www.spamhaus.org/sbl/query/SBL341115
+ExitPolicy reject 201.149.83.183/32:* # https://www.spamhaus.org/sbl/query/SBL239380
+ExitPolicy reject 201.232.32.124/32:* # https://www.spamhaus.org/sbl/query/SBL332668
+ExitPolicy reject 202.115.63.125/32:* # https://www.spamhaus.org/sbl/query/SBL343331
+ExitPolicy reject 202.144.144.195/32:* # https://www.spamhaus.org/sbl/query/SBL254880
+ExitPolicy reject 202.150.213.85/32:* # https://www.spamhaus.org/sbl/query/SBL271092
+ExitPolicy reject 202.150.213.93/32:* # https://www.spamhaus.org/sbl/query/SBL210486
+ExitPolicy reject 202.28.32.110/32:* # https://www.spamhaus.org/sbl/query/SBL244614
+ExitPolicy reject 202.28.32.20/32:* # https://www.spamhaus.org/sbl/query/SBL286933
+ExitPolicy reject 202.29.22.38/32:* # https://www.spamhaus.org/sbl/query/SBL241091
+ExitPolicy reject 202.29.230.198/32:* # https://www.spamhaus.org/sbl/query/SBL200468
+ExitPolicy reject 202.67.13.107/32:* # https://www.spamhaus.org/sbl/query/SBL246057
+ExitPolicy reject 203.170.192.150/32:* # https://www.spamhaus.org/sbl/query/SBL336998
+ExitPolicy reject 203.170.192.240/32:* # https://www.spamhaus.org/sbl/query/SBL254570
+ExitPolicy reject 203.170.193.23/32:* # https://www.spamhaus.org/sbl/query/SBL129228
+ExitPolicy reject 203.24.188.166/32:* # https://www.spamhaus.org/sbl/query/SBL389443
+ExitPolicy reject 208.83.210.109/32:* # https://www.spamhaus.org/sbl/query/SBL345855
+ExitPolicy reject 208.93.233.58/32:* # https://www.spamhaus.org/sbl/query/SBL177762
+ExitPolicy reject 209.99.40.225/32:* # https://www.spamhaus.org/sbl/query/SBL391324 - Ramnit C&C
+ExitPolicy reject 209.164.84.70/32:* # https://www.spamhaus.org/sbl/query/SBL271225
+ExitPolicy reject 209.182.193.155/32:* # https://www.spamhaus.org/sbl/query/SBL384076
+ExitPolicy reject 209.182.199.168/32:* # https://www.spamhaus.org/sbl/query/SBL382749
+ExitPolicy reject 209.182.208.165/32:* # https://www.spamhaus.org/sbl/query/SBL377435
+ExitPolicy reject 209.182.213.90/32:* # https://www.spamhaus.org/sbl/query/SBL371416
+ExitPolicy reject 209.191.185.67/32:* # https://www.spamhaus.org/sbl/query/SBL286661
+ExitPolicy reject 210.37.11.238/32:* # https://www.spamhaus.org/sbl/query/SBL223820
+ExitPolicy reject 210.4.76.221/32:* # https://www.spamhaus.org/sbl/query/SBL258446
+ExitPolicy reject 210.46.85.150/32:* # https://www.spamhaus.org/sbl/query/SBL321921
+ExitPolicy reject 210.83.80.26/32:* # https://www.spamhaus.org/sbl/query/SBL337261
+ExitPolicy reject 212.252.45.46/32:* # https://www.spamhaus.org/sbl/query/SBL375209
+ExitPolicy reject 212.44.64.202/32:* # https://www.spamhaus.org/sbl/query/SBL208591
+ExitPolicy reject 212.72.132.138/32:* # https://www.spamhaus.org/sbl/query/SBL304410
+ExitPolicy reject 213.147.67.20/32:* # https://www.spamhaus.org/sbl/query/SBL210538
+ExitPolicy reject 213.185.88.41/32:* # https://www.spamhaus.org/sbl/query/SBL392540
+ExitPolicy reject 213.185.88.41/32:* # https://www.spamhaus.org/sbl/query/SBL392540
+ExitPolicy reject 213.185.88.60/32:* # https://www.spamhaus.org/sbl/query/SBL373534
+ExitPolicy reject 213.205.38.29/32:* # https://www.spamhaus.org/sbl/query/SBL391029
+ExitPolicy reject 213.25.134.75/32:* # https://www.spamhaus.org/sbl/query/SBL329827
+ExitPolicy reject 216.176.100.240/32:* # https://www.spamhaus.org/sbl/query/SBL126432
+ExitPolicy reject 216.215.112.149/32:* # https://www.spamhaus.org/sbl/query/SBL119189
+ExitPolicy reject 216.59.16.171/32:* # https://www.spamhaus.org/sbl/query/SBL326263
+ExitPolicy reject 222.124.202.178/32:* # https://www.spamhaus.org/sbl/query/SBL184445
+ExitPolicy reject 222.124.206.41/32:* # https://www.spamhaus.org/sbl/query/SBL338231
+ExitPolicy reject 222.29.197.232/32:* # https://www.spamhaus.org/sbl/query/SBL219755
+
+ExitPolicy reject 46.173.218.123/32:* # CBL - Ramnit C&C
+ExitPolicy reject 91.219.29.41/32:* # CBLCSS - Locky C&C
+ExitPolicy reject 195.208.1.101/32:* # CBL - Pykspa C&C
+
+ExitPolicy reject 5.79.71.205/32:* # shadowserver .org
+ExitPolicy reject 5.79.71.225/32:* # shadowserver .org
+ExitPolicy reject 46.244.21.4/32:* # shadowserver .org
+ExitPolicy reject 50.21.181.152/32:* # shadowserver .org
+ExitPolicy reject 50.63.202.35/32:* # sinkholerecords .com
+ExitPolicy reject 52.5.245.208/32:* # sinkholeredirect .us / sinkhole2.botnethunter .org
+ExitPolicy reject 64.71.166.50/32:* # CBL sinkhole - trojan (unknown)
+ExitPolicy reject 67.215.255.139/32:* # sinkhole.blacklab .io
+ExitPolicy reject 74.200.48.169/32:* # sinkhole.gladtech .net
+ExitPolicy reject 74.208.153.9/32:* # shadowserver .org
+ExitPolicy reject 74.208.164.166/32:* # shadowserver .org
+ExitPolicy reject 74.208.64.191/32:* # shadowserver .org
+ExitPolicy reject 85.17.31.122/32:* # shadowserver .org
+ExitPolicy reject 85.17.31.82/32:* # shadowserver .org
+ExitPolicy reject 87.106.149.145/32:* # shadowserver .org
+ExitPolicy reject 87.106.149.153/32:* # shadowserver .org
+ExitPolicy reject 87.106.18.112/32:* # CBL sinkhole - zeus
+ExitPolicy reject 87.106.18.141/32:* # CBL sinkhole - gozi
+ExitPolicy reject 87.106.190.153/32:* # CBL sinkhole - tinba
+ExitPolicy reject 87.106.20.192/32:* # shadowserver .org
+ExitPolicy reject 87.106.24.200/32:* # shadowserver .org
+ExitPolicy reject 87.106.253.18/32:* # shadowserver .org
+ExitPolicy reject 87.106.26.9/32:* # shadowserver .org
+ExitPolicy reject 95.211.230.75/32:* # sinkhole .ru
+ExitPolicy reject 104.244.14.252/32:* # CBL sinkhole - conficker / sinkhole-iad1-2.cwg.fsi .io
+ExitPolicy reject 109.70.26.37/32:* # sinkhole .ru
+ExitPolicy reject 144.217.74.156/32:* # sinkhole .network / sinkhole .tech
+ExitPolicy reject 146.148.124.166/32:* # CBL sinkhole - gootkit
+ExitPolicy reject 148.81.111.111/32:* # sinkhole.cert .pl
+ExitPolicy reject 151.80.148.103/32:* # sinkhole.fnord .pl
+ExitPolicy reject 176.58.104.168/32:* # sinkhole.sidnlabs .nl
+ExitPolicy reject 178.162.203.202/32:* # shadowserver .org
+ExitPolicy reject 178.162.203.211/32:* # shadowserver .org
+ExitPolicy reject 178.162.203.226/32:* # shadowserver .org
+ExitPolicy reject 178.162.217.107/32:* # shadowserver .org
+ExitPolicy reject 184.105.192.2/32:* # CBL sinkhole - trojan (unknown) / shadowserver .org
+ExitPolicy reject 192.0.72.20/32:* # sinkholes.files.wordpress .com
+ExitPolicy reject 192.0.72.21/32:* # sinkholes.files.wordpress .com
+ExitPolicy reject 192.169.69.25/32:* # sinkhole.hyas .com
+ExitPolicy reject 192.42.116.41/32:* # CBL sinkhole - citadel / gozi / locky / zeus
+ExitPolicy reject 192.42.119.41/32:* # CBL sinkhole - zeus
+ExitPolicy reject 193.166.255.170/32:* # sinkhole.fitsec .com / sinkhole.fitsec.com.tlaloc666 .com
+ExitPolicy reject 193.166.255.171/32:* # sinkhole.fitsec .com / sinkhole.fitsec.com.tlaloc666 .com
+ExitPolicy reject 204.11.56.48/32:* # SINKHOLESINKHOLESINKHOLE .COM / SINKHOLE.MALWAREDNS .COM
+ExitPolicy reject 208.91.197.46/32:* # SINKHOLESINKHOLESINKHOLE .COM / SINKHOLE.MALWAREDNS .COM
+ExitPolicy reject 212.227.20.93/32:* # CBL sinkhole - command and control server (unknown)
+ExitPolicy reject 213.165.83.176/32:* # shadowserver .org
+ExitPolicy reject 216.218.135.114/32:* # shadowserver .org
+ExitPolicy reject 216.218.185.162/32:* # CBL sinkhole - nymaim / ranbyus / tinba / shadowserver .org
+ExitPolicy reject 216.218.208.114/32:* # CBL sinkhole - gootkit / shadowserver .org
+ExitPolicy reject 216.66.15.109/32:* # sinkhole-iad1-1.cwg.fsi .io
+
+ExitPolicy reject 72.55.186.0/24:* #funio abuse
+ExitPolicy reject 174.142.230.0/24:* #funio abuse
+ExitPolicy reject 184.107.100.0/24:* #funio abuse
+ExitPolicy reject 184.107.101.0/24:* #funio abuse
+ExitPolicy reject 184.107.116.0/24:* #funio abuse
+ExitPolicy reject 108.163.147.0/24:* #funio abuse
+ExitPolicy reject 198.72.104.0/24:* #funio abuse
+ExitPolicy reject 67.205.125.0/24:* #funio abuse
+ExitPolicy reject 67.205.105.0/24:* #funio abuse
+ExitPolicy reject 184.107.95.0/24:* #funio abuse
+ExitPolicy reject 5.145.168.0/21:* #comvive abuse
+ExitPolicy reject 37.235.53.0/24:* #comvive abuse
+ExitPolicy reject 37.252.96.0/24:* #comvive abuse
+ExitPolicy reject 77.81.112.0/22:* #comvive abuse
+ExitPolicy reject 77.81.116.0/22:* #comvive abuse
+ExitPolicy reject 91.192.108.0/22:* #comvive abuse
+ExitPolicy reject 93.93.64.0/21:* #comvive abuse
+ExitPolicy reject 151.236.23.0/24:* #comvive abuse
+ExitPolicy reject 158.255.238.0/24:* #comvive abuse
+ExitPolicy reject 185.49.192.0/22:* #comvive abuse
+ExitPolicy reject 185.50.196.0/22:* #comvive abuse
+ExitPolicy reject 185.66.175.0/24:* #comvive abuse
+ExitPolicy reject 185.76.77.0/24:* #comvive abuse
+ExitPolicy reject 185.86.210.0/24:* #comvive abuse
+ExitPolicy reject 185.104.152.0/24:* #comvive abuse
+ExitPolicy reject 185.129.249.0/24:* #comvive abuse
+ExitPolicy reject 192.71.213.0/24:* #comvive abuse
+ExitPolicy reject 195.78.228.0/22:* #comvive abuse
+ExitPolicy reject 23.217.172.41:* #PSN
+ExitPolicy reject 23.217.173.70:* #PSN
+ExitPolicy reject 23.217.161.62:* #PSN
+ExitPolicy reject 23.217.161.153:* #PSN
+ExitPolicy reject 23.235.33.144:* #VAT PIN ABUSE
+ExitPolicy accept *:80
+ExitPolicy accept *:443
+ExitPolicy reject *:*
