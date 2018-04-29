@@ -240,11 +240,11 @@
                 case $CHOICE in
                         1)
                             echo "Loading in a Passive ExitPolicy.."
-                              wget https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/passive.s02018041301.exitlist.txt -O ->> /etc/tor/torrc
+                              wget https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/passive.s02018042201.exitlist.txt -O ->> /etc/tor/torrc
                             ;;
                         2)
                             echo "Loading in a Browser Only ExitPolicy.."
-                              wget https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/browser.s02018041301.exitlist.txt -O ->> /etc/tor/torrc
+                              wget https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/browser.s02018042201.exitlist.txt -O ->> /etc/tor/torrc
                             ;;
                         3)
                             echo "Loading in NON-EXIT Policy"
