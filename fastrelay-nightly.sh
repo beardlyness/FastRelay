@@ -167,7 +167,7 @@
                 apt-get install nginx
                 service nginx status
               echo "Preventing NGINX from logging..."
-                wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/beardlnyess/FastRelay-Nightly/master/nginx/nginx.conf
+                wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/beardlyness/FastRelay-Nightly/master/nginx/nginx.conf
               echo "Restarting the NGINX service..."
                 service nginx restart
               echo "Grabbing fastrelay-website-template from GitHub.."
