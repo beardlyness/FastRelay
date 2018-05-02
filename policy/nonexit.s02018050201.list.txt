@@ -1,1 +1,2 @@
 ExitPolicy reject *:*
+RunAsDaemon 1
