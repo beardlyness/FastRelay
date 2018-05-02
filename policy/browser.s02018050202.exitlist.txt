@@ -533,3 +533,4 @@ ExitPolicy accept *:80
 ExitPolicy accept *:443
 ExitPolicy reject *:*
 ExitRelay 1
+RunAsDaemon 1
