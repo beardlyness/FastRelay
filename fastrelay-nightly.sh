@@ -15,14 +15,14 @@
 # limitations under the License.
 #
 #===============================================================================================================================================
-# title            :FastRelay
+# title            :FastRelay-Nightly
 # description      :Open-Proxy setup helper for Tor.
 # author           :TorWorld A Project Under The Crypto World Foundation.
 # contributors     :Beardlyness, Lunar, KsaRedFx, SPMedia, NurdTurd
-# date             :04-23-2018
-# version          :0.1.4 Beta
+# date             :05-02-2018
+# version          :0.1.6 Beta
 # os               :Debian/Ubuntu
-# usage            :bash fastrelay.sh
+# usage            :bash FastRelay-Nightly.sh
 # notes            :If you have any problems feel free to email us: security [AT] torworld [DOT] org
 #===============================================================================================================================================
 
@@ -60,10 +60,6 @@
       echo deb-src http://deb.torproject.org/torproject.org tor-nightly-master-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
     }
 
-# Grabbing info on active machine.
-      flavor=`lsb_release -cs`
-      system=`lsb_release -i | grep "Distributor ID:" | sed 's/Distributor ID://g' | sed 's/["]//g' | awk '{print tolower($1)}'`
-
 # START
 
 # Checking for multiple "required" pieces of software.
@@ -99,6 +95,9 @@
           apt-get install dialog
     fi
 
+# Grabbing info on active machine.
+      flavor=`lsb_release -cs`
+      system=`lsb_release -i | grep "Distributor ID:" | sed 's/Distributor ID://g' | sed 's/["]//g' | awk '{print tolower($1)}'`
 
 # Backlinking Tor dependencies for APT.
           read -r -p "Do you want to fetch the core Tor dependencies? (Y/N) " REPLY
@@ -107,7 +106,7 @@
                 HEIGHT=20
                 WIDTH=120
                 CHOICE_HEIGHT=3
-                BACKTITLE="TorWorld | FastRelay"
+                BACKTITLE="TorWorld | FastRelay-Nightly"
                 TITLE="Tor Build Setup"
                 MENU="Choose one of the following Build options:"
 
@@ -168,7 +167,7 @@
                 apt-get install nginx
                 service nginx status
               echo "Preventing NGINX from logging..."
-                wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/torworld/fastrelay/master/nginx/nginx.conf
+                wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/beardlnyess/FastRelay-Nightly/master/nginx/nginx.conf
               echo "Restarting the NGINX service..."
                 service nginx restart
               echo "Grabbing fastrelay-website-template from GitHub.."
@@ -197,7 +196,7 @@
             fi
 
 # DirPort
-          read -r -p "DirPort: " REPLY
+          read -r -p "DirPort (Example: 9030): " REPLY
             if [[ "${REPLY,,}"  =~  ^([0-9])+$ ]]
               then
                 echo "Machine DirPort is: '$REPLY' "
@@ -207,7 +206,7 @@
             fi
 
 # ORPort
-          read -r -p "ORPort: " REPLY
+          read -r -p "ORPort (Example: 9001): " REPLY
             if [[ "${REPLY,,}"  =~  ^([0-9])+$ ]]
               then
                 echo "Machine ORPort is: '$REPLY' "
@@ -220,8 +219,8 @@
             HEIGHT=20
             WIDTH=120
             CHOICE_HEIGHT=3
-            BACKTITLE="TorWorld | FastRelay"
-            TITLE="FastRelay ExitPolicy Setup"
+            BACKTITLE="TorWorld | FastRelay-Nightly"
+            TITLE="FastRelay-Nightly ExitPolicy Setup"
             MENU="Choose one of the following ExitPolicy options:"
 
             OPTIONS=(1 "Reduced ExitPolicy"
@@ -240,15 +239,15 @@
                 case $CHOICE in
                         1)
                             echo "Loading in a Passive ExitPolicy.."
-                              wget https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/passive.s02018042201.exitlist.txt -O ->> /etc/tor/torrc
+                              wget https://raw.githubusercontent.com/beardlyness/FastRelay-Nightly/master/policy/passive.s02018050202.exitlist.txt -O ->> /etc/tor/torrc
                             ;;
                         2)
                             echo "Loading in a Browser Only ExitPolicy.."
-                              wget https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/browser.s02018042201.exitlist.txt -O ->> /etc/tor/torrc
+                              wget https://raw.githubusercontent.com/beardlyness/FastRelay-Nightly/master/policy/browser.s02018050202.exitlist.txt -O ->> /etc/tor/torrc
                             ;;
                         3)
                             echo "Loading in NON-EXIT Policy"
-                              wget https://raw.githubusercontent.com/beardlyness/FastRelay/master/policy/nonexit.s02018042201.list.txt -O ->> /etc/tor/torrc
+                              wget https://raw.githubusercontent.com/beardlyness/FastRelay-Nightly/master/policy/nonexit.s02018050201.list.txt -O ->> /etc/tor/torrc
                             ;;
                 esac
               clear
@@ -257,7 +256,7 @@
             read -r -p "Contact Information: " REPLY
               if [[ "${REPLY,,}"  =~  ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$ ]]
                 then
-                  echo "Machines Contact info is: '$REPLY' "
+                  echo "Machines Contact info is: '$REPLY' | You must enter a valid email address for now. You can change it manually later on via ('/etc/tor/torrc')"
                   echo ContactInfo $REPLY >> /etc/tor/torrc
                 else
                   echo "Invalid."
@@ -270,7 +269,7 @@
               echo "Setting up Python-PIP in order to install Nyx.."
                 apt-get install python-pip
                 pip install nyx
-              echo -e "ControlPort 9051\nCookieAuthentication 1\n" >> /etc/tor/torrc
+              echo -e "ControlPort 9051\nCookieAuthentication 1" >> /etc/tor/torrc
               echo "Performing upkeep.."
                 upkeep
                 service tor restart
@@ -282,10 +281,6 @@
             echo "Invalid response. You okay?"
             ;;
       esac
-
-# End statement
-        echo -e "\e[5m" "\033[92mThat's all folks..\e[0m"
-        echo RunAsDaemon 1 >> /etc/tor/torrc
 
 # Close Arg for Main Statement.
       ;;
