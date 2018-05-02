@@ -532,3 +532,4 @@ ExitPolicy reject 23.235.33.144:* #VAT PIN ABUSE
 ExitPolicy accept *:80
 ExitPolicy accept *:443
 ExitPolicy reject *:*
+ExitRelay 1
