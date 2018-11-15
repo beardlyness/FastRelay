@@ -20,8 +20,8 @@
 # author           :TorWorld A Project Under The Crypto World Foundation.
 # contributors     :Beardlyness, Lunar, KsaRedFx, SPMedia, NurdTurd
 # date             :05-02-2018
-# version          :0.1.6 Beta
-# os               :Debian/Ubuntu
+# version          :0.1.8 Beta
+# os               :Debian/Ubuntu (Debian 8 - 9 | Ubuntu 14.04 - 18.04)
 # usage            :bash FastRelay-Nightly.sh
 # notes            :If you have any problems feel free to email us: security [AT] torworld [DOT] org
 #===============================================================================================================================================
@@ -50,8 +50,8 @@
 
     experimental(){
         stable
-      echo deb http://deb.torproject.org/torproject.org tor-experimental-0.3.3.x-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
-      echo deb-src http://deb.torproject.org/torproject.org tor-experimental-0.3.3.x-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
+      echo deb https://deb.torproject.org/torproject.org tor-experimental-0.3.4.x-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
+      echo deb-src https://deb.torproject.org/torproject.org tor-experimental-0.3.4.x-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
     }
 
     nightly(){
@@ -225,7 +225,7 @@
 
             OPTIONS=(1 "Reduced ExitPolicy"
                      2 "Browser Only ExitPolicy"
-                     3 "NON-Exit Policy")
+                     3 "NON-Exit (RELAY ONLY) Policy")
 
             CHOICE=$(dialog --clear \
                             --backtitle "$BACKTITLE" \
@@ -246,7 +246,7 @@
                               wget https://raw.githubusercontent.com/beardlyness/FastRelay-Nightly/master/policy/browser.s02018050202.exitlist.txt -O ->> /etc/tor/torrc
                             ;;
                         3)
-                            echo "Loading in NON-EXIT Policy"
+                            echo "Loading in NON-EXIT (RELAY ONLY) Policy"
                               wget https://raw.githubusercontent.com/beardlyness/FastRelay-Nightly/master/policy/nonexit.s02018050201.list.txt -O ->> /etc/tor/torrc
                             ;;
                 esac
