@@ -1,6 +1,6 @@
 /* BODY CSS */
 body {
-  background-color: #9b59b6;
+  background-color: #ac74fe;
   font-family: sans-serif;
 }
 
@@ -9,7 +9,7 @@ div.main{
   overflow:auto;
   background-color: white;
   border-radius: 2px;
-  box-shadow: 0 4px 14px 1px rgba(50, 50, 50, 0.14);
+  box-shadow: 0 4px 14px 1px rgba(29, 28, 30, 0.68);
   box-sizing: border-box;
   color: black;
   line-height: 1.5;
@@ -81,6 +81,7 @@ color: #27ae60;
 /* PRE CSS */
 pre {
   display: block;
+  text-align: center;
   padding: 9.5px;
   margin: 0 0 10px;
   font-size: 13px;
@@ -94,9 +95,11 @@ pre {
 
 /* LOGO CSS */
 .logo{
-    margin-top: 20px;
-    max-width: 15%;
-    max-height: 15%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 35%;
+    max-height: 35%;
     display: block;
     -o-transition:.5s;
     -ms-transition:.5s;
@@ -112,11 +115,21 @@ pre {
 
 /* MEDIA QUERY CSS */
 @media only screen and (max-width: 630px) {
+
+  p {
+      line-height: 16px;
+      position: relative;
+      border-radius: 5px;
+      font-size: 12px;
+      word-wrap: break-word;
+  }
+
   pre {
+    text-align: center;
     display: block;
     padding: 9.5px;
     margin: 0 0 10px;
-    font-size: 8px;
+    font-size: 10px;
     line-height: 1.42857143;
     color: #333;
     word-break: break-all;
