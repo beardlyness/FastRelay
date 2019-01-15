@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #===============================================================================================================================================
-# (C) Copyright 2013-2018 under the Crypto World Foundation (https://cryptoworld.is).
+# (C) Copyright 2013-2019 under the Crypto World Foundation (https://cryptoworld.is).
 #
 # Licensed under the GNU GENERAL PUBLIC LICENSE, Version 3.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,9 +19,9 @@
 # description      :Open-Proxy setup helper for Tor.
 # author           :TorWorld A Project Under The Crypto World Foundation.
 # contributors     :Beardlyness, Lunar, KsaRedFx, SPMedia, NurdTurd
-# date             :11-15-2018
-# version          :0.1.8 Beta
-# os               :Debian/Ubuntu (Debian 8 - 9 | Ubuntu 14.04 - 18.04)
+# date             :01-15-2019
+# version          :0.1.9 Beta
+# os               :Debian/Ubuntu (Debian 8 - 10 | Ubuntu 14.04 - 18.10)
 # usage            :bash FastRelay.sh
 # notes            :If you have any problems feel free to email us: security [AT] torworld [DOT] org
 #===============================================================================================================================================
@@ -106,7 +106,7 @@
                 HEIGHT=20
                 WIDTH=120
                 CHOICE_HEIGHT=3
-                BACKTITLE="TorWorld | FastRelay-Nightly"
+                BACKTITLE="TorWorld | FastRelay"
                 TITLE="Tor Build Setup"
                 MENU="Choose one of the following Build options:"
 
@@ -153,36 +153,6 @@
             esac
         clear
 
-# Backlinking NGINX dependencies for APT.
-    read -r -p "Do you want to fetch the core NGINX dependencies, and install? (Y/N) " REPLY
-      case "${REPLY,,}" in
-        [yY]|[yY][eE][sS])
-              echo deb http://nginx.org/packages/$system/ $flavor nginx > /etc/apt/sources.list.d/repo.nginx.list
-              echo deb-src http://nginx.org/packages/$system/ $flavor nginx >> /etc/apt/sources.list.d/repo.nginx.list
-                wget https://nginx.org/keys/nginx_signing.key
-                apt-key add nginx_signing.key
-              echo "Performing upkeep.."
-                upkeep
-              echo "Installing NGINX now.."
-                apt-get install nginx
-                service nginx status
-              echo "Preventing NGINX from logging..."
-                wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/beardlyness/FastRelay-Nightly/master/nginx/nginx.conf
-              echo "Restarting the NGINX service..."
-                service nginx restart
-              echo "Grabbing fastrelay-website-template from GitHub.."
-                wget https://github.com/torworld/fastrelay-website-template/archive/master.tar.gz -O - | tar -xz -C /usr/share/nginx/html/  && mv /usr/share/nginx/html/fastrelay-website-template-master/* /usr/share/nginx/html/
-              echo "Removing temporary files/folders.."
-                rm -rf /usr/share/nginx/html/fastrelay-website-template-master*
-            ;;
-          [nN]|[nN][oO])
-            echo "You have said no? We cannot work without your permission!"
-            ;;
-          *)
-            echo "Invalid response. You okay?"
-            ;;
-      esac
-
 # Setting up the Torrc file with config input options.
 
 # Nickname
@@ -218,14 +188,15 @@
 # Dialog for ExitPolicy selection.
             HEIGHT=20
             WIDTH=120
-            CHOICE_HEIGHT=3
-            BACKTITLE="TorWorld | FastRelay-Nightly"
-            TITLE="FastRelay-Nightly ExitPolicy Setup"
+            CHOICE_HEIGHT=4
+            BACKTITLE="TorWorld | FastRelay"
+            TITLE="FastRelay ExitPolicy Setup"
             MENU="Choose one of the following ExitPolicy options:"
 
             OPTIONS=(1 "Reduced ExitPolicy"
                      2 "Browser Only ExitPolicy"
-                     3 "NON-Exit (RELAY ONLY) Policy")
+                     3 "NON-Exit (RELAY ONLY) Policy"
+                     4 "Bridge Only (Unlisted Bridge) Policy")
 
             CHOICE=$(dialog --clear \
                             --backtitle "$BACKTITLE" \
@@ -239,18 +210,53 @@
                 case $CHOICE in
                         1)
                             echo "Loading in a Passive ExitPolicy.."
-                              wget https://raw.githubusercontent.com/beardlyness/FastRelay-Nightly/master/policy/passive.s02018050202.exitlist.txt -O ->> /etc/tor/torrc
+                              wget https://raw.githubusercontent.com/torworld/fastrelay/master/policy/passive.s02018050201.exitlist.txt -O ->> /etc/tor/torrc
                             ;;
                         2)
                             echo "Loading in a Browser Only ExitPolicy.."
-                              wget https://raw.githubusercontent.com/beardlyness/FastRelay-Nightly/master/policy/browser.s02018050202.exitlist.txt -O ->> /etc/tor/torrc
+                              wget https://raw.githubusercontent.com/torworld/fastrelay/master/policy/browser.s02018050201.exitlist.txt -O ->> /etc/tor/torrc
                             ;;
                         3)
                             echo "Loading in NON-EXIT (RELAY ONLY) Policy"
-                              wget https://raw.githubusercontent.com/beardlyness/FastRelay-Nightly/master/policy/nonexit.s02018050201.list.txt -O ->> /etc/tor/torrc
+                              wget https://raw.githubusercontent.com/torworld/fastrelay/master/policy/nonexit.s02018050201.list.txt -O ->> /etc/tor/torrc
+                            ;;
+                        4)
+                            echo "Loading in Bridge Only (Unlisted Bridge) Policy"
+                              wget https://raw.githubusercontent.com/torworld/fastrelay/master/policy/bridge.s02019011501.list -O ->> /etc/tor/torrc
                             ;;
                 esac
               clear
+
+              # Backlinking NGINX dependencies for APT.
+                  read -r -p "Do you want to fetch the core NGINX dependencies, and install? (Y/N) " REPLY
+                    case "${REPLY,,}" in
+                      [yY]|[yY][eE][sS])
+                            echo deb http://nginx.org/packages/$system/ $flavor nginx > /etc/apt/sources.list.d/repo.nginx.list
+                            echo deb-src http://nginx.org/packages/$system/ $flavor nginx >> /etc/apt/sources.list.d/repo.nginx.list
+                              wget https://nginx.org/keys/nginx_signing.key
+                              apt-key add nginx_signing.key
+                            echo "Performing upkeep.."
+                              upkeep
+                            echo "Installing NGINX now.."
+                              apt-get install nginx
+                              service nginx status
+                            echo "Preventing NGINX from logging..."
+                              wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/torworld/fastrelay/master/nginx/nginx.conf
+                            echo "Restarting the NGINX service..."
+                              service nginx restart
+                            echo "Grabbing fastrelay-website-template from GitHub.."
+                              wget https://github.com/torworld/fastrelay-website-template/archive/master.tar.gz -O - | tar -xz -C /usr/share/nginx/html/  && mv /usr/share/nginx/html/fastrelay-website-template-master/* /usr/share/nginx/html/
+                            echo "Removing temporary files/folders.."
+                              rm -rf /usr/share/nginx/html/fastrelay-website-template-master*
+                          ;;
+                        [nN]|[nN][oO])
+                          echo "You have said no? We cannot work without your permission!"
+                          ;;
+                        *)
+                          echo "Invalid response. You okay?"
+                          ;;
+                    esac
+                  clear
 
 # Contact Information
             read -r -p "Contact Information: " REPLY
