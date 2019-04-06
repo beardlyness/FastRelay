@@ -15,50 +15,104 @@
 # limitations under the License.
 #
 #===============================================================================================================================================
-# title            :FastRelay-Nightly
+# title            :FastRelay
 # description      :Open-Proxy setup helper for Tor.
 # author           :TorWorld A Project Under The Crypto World Foundation.
 # contributors     :Beardlyness, Lunar, KsaRedFx, SPMedia, NurdTurd
-# date             :01-15-2019
-# version          :0.1.9 Beta
+# date             :04-05-2019
+# version          :0.2.0 Beta
 # os               :Debian/Ubuntu (Debian 8 - 10 | Ubuntu 14.04 - 18.10)
 # usage            :bash FastRelay.sh
 # notes            :If you have any problems feel free to email us: security [AT] torworld [DOT] org
 #===============================================================================================================================================
 
+# Force check for root
+  if ! [ $(id -u) = 0 ]; then
+    echo "You need to be logged in as root!"
+    exit 1
+  fi
+
 # Setting up an update/upgrade glabal function
     function upkeep() {
-      apt-get update -y
-      apt-get dist-upgrade -y
-      apt-get clean -y
+      echo "Performing upkeep.."
+        apt-get update -y
+        apt-get dist-upgrade -y
+        apt-get clean -y
     }
 
 # Setting up a Tor installer + status check with hault
     function torstall() {
-      apt-get install tor
-      service tor status
-      service tor stop
+      echo "Performing torstall.."
+        apt-get install tor
+        service tor status
+        service tor stop
     }
 
 # Setting up different Tor branches to prep for install
-    stable(){
+    function tor_stable () {
+      echo "Grabbing Stable build dependencies.."
       echo deb http://deb.torproject.org/torproject.org $flavor main > /etc/apt/sources.list.d/repo.torproject.list
       echo deb-src http://deb.torproject.org/torproject.org $flavor main >> /etc/apt/sources.list.d/repo.torproject.list
-        gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+        apt install tor deb.torproject.org-keyring
+        curl https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | gpg --import
         gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
+        gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
     }
 
-    experimental(){
-        stable
+    function tor_experimental () {
+      echo "Grabbing Experimental build dependencies.."
+        tor_stable
       echo deb https://deb.torproject.org/torproject.org tor-experimental-0.3.4.x-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
       echo deb-src https://deb.torproject.org/torproject.org tor-experimental-0.3.4.x-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
     }
 
-    nightly(){
-        stable
+    function tor_nightly () {
+      echo "Grabbing Nightly build dependencies.."
+        tor_stable
       echo deb http://deb.torproject.org/torproject.org tor-nightly-master-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
       echo deb-src http://deb.torproject.org/torproject.org tor-nightly-master-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
     }
+
+    # Setting up different NGINX branches to prep for install
+  function nginx_stable () {
+      echo deb http://nginx.org/packages/$system/ $flavor nginx > /etc/apt/sources.list.d/$flavor.nginx.stable.list
+      echo deb-src http://nginx.org/packages/$system/ $flavor nginx >> /etc/apt/sources.list.d/$flavor.nginx.stable.list
+        wget https://nginx.org/keys/nginx_signing.key
+        apt-key add nginx_signing.key
+    }
+
+  function nginx_mainline () {
+      echo deb http://nginx.org/packages/mainline/$system/ $flavor nginx > /etc/apt/sources.list.d/$flavor.nginx.mainline.list
+      echo deb-src http://nginx.org/packages/mainline/$system/ $flavor nginx >> /etc/apt/sources.list.d/$flavor.nginx.mainline.list
+        wget https://nginx.org/keys/nginx_signing.key
+        apt-key add nginx_signing.key
+    }
+
+    # Attached func for NGINX branch prep.
+      function nginx_default() {
+        echo "Installing NGINX.."
+          apt-get install nginx
+          service nginx status
+        echo "Raising limit of workers.."
+          ulimit -n 65536
+          ulimit -a
+        echo "Setting up Security Limits.."
+          wget -O /etc/security/limits.conf https://raw.githubusercontent.com/torworld/fastrelay/master/etc/security/limits.conf
+        echo "Setting up background NGINX workers.."
+          wget -O /etc/default/nginx https://raw.githubusercontent.com/torworld/fastrelay/master/etc/default/nginx
+          echo "Setting up configuration file for NGINX main configuration.."
+            wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/torworld/fastrelay/master/nginx/nginx.conf
+        echo "Setting up folders.."
+          mkdir -p /etc/engine/ssl/live
+          mkdir -p /var/www/html/pub/live
+        echo "Restarting the NGINX service..."
+        service nginx restart
+        echo "Grabbing fastrelay-website-template from GitHub.."
+          wget https://github.com/torworld/fastrelay-website-template/archive/master.tar.gz -O - | tar -xz -C /var/www/html/pub/live/  && mv /var/www/html/pub/live/fastrelay-website-template-master/* /var/www/html/pub/live/
+        echo "Removing temporary files/folders.."
+          rm -rf /var/www/html/pub/live/fastrelay-website-template-master*
+      }
+
 
 # START
 
@@ -127,27 +181,18 @@
 # Attached Arg for dialogs $CHOICE output
             case $CHOICE in
               1)
-              echo "Grabbing Stable build dependencies.."
-                stable
-              echo "Performing upkeep.."
+                tor_stable
                 upkeep
-              echo "Performing torstall.."
                 torstall
                 ;;
               2)
-              echo "Grabbing Experimental build dependencies.."
-                experimental
-              echo "Performing upkeep.."
+                tor_experimental
                 upkeep
-              echo "Performing torstall.."
                 torstall
                 ;;
               3)
-              echo "Grabbing Nightly build dependencies.."
-                nightly
-              echo "Performing upkeep.."
+                tor_nightly
                 upkeep
-              echo "Performing torstall.."
                 torstall
                 ;;
             esac
@@ -227,36 +272,56 @@
                 esac
               clear
 
-              # Backlinking NGINX dependencies for APT.
-                  read -r -p "Do you want to fetch the core NGINX dependencies, and install? (Y/N) " REPLY
-                    case "${REPLY,,}" in
-                      [yY]|[yY][eE][sS])
-                            echo deb http://nginx.org/packages/$system/ $flavor nginx > /etc/apt/sources.list.d/repo.nginx.list
-                            echo deb-src http://nginx.org/packages/$system/ $flavor nginx >> /etc/apt/sources.list.d/repo.nginx.list
-                              wget https://nginx.org/keys/nginx_signing.key
-                              apt-key add nginx_signing.key
-                            echo "Performing upkeep.."
-                              upkeep
-                            echo "Installing NGINX now.."
-                              apt-get install nginx
-                              service nginx status
-                            echo "Preventing NGINX from logging..."
-                              wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/torworld/fastrelay/master/nginx/nginx.conf
-                            echo "Restarting the NGINX service..."
-                              service nginx restart
-                            echo "Grabbing fastrelay-website-template from GitHub.."
-                              wget https://github.com/torworld/fastrelay-website-template/archive/master.tar.gz -O - | tar -xz -C /usr/share/nginx/html/  && mv /usr/share/nginx/html/fastrelay-website-template-master/* /usr/share/nginx/html/
-                            echo "Removing temporary files/folders.."
-                              rm -rf /usr/share/nginx/html/fastrelay-website-template-master*
-                          ;;
-                        [nN]|[nN][oO])
-                          echo "You have said no? We cannot work without your permission!"
-                          ;;
-                        *)
-                          echo "Invalid response. You okay?"
-                          ;;
-                    esac
-                  clear
+              # NGINX Arg main
+              read -r -p "Do you want to fetch the core NGINX dependencies, and install? (Y/N) " REPLY
+                case "${REPLY,,}" in
+                  [yY]|[yY][eE][sS])
+                    HEIGHT=20
+                    WIDTH=120
+                    CHOICE_HEIGHT=2
+                    BACKTITLE="NGINXY"
+                    TITLE="NGINX Branch Builds"
+                    MENU="Choose one of the following Build options:"
+
+                    OPTIONS=(1 "Stable"
+                             2 "Mainline")
+
+                    CHOICE=$(dialog --clear \
+                                    --backtitle "$BACKTITLE" \
+                                    --title "$TITLE" \
+                                    --menu "$MENU" \
+                                    $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                                    "${OPTIONS[@]}" \
+                                    2>&1 >/dev/tty)
+
+
+              # Attached Arg for dialogs $CHOICE output
+                  case $CHOICE in
+                    1)
+                      echo "Grabbing Stable build dependencies.."
+                        nginx_stable
+                        upkeep
+                        nginx_default
+                        ;;
+                    2)
+                      echo "Grabbing Mainline build dependencies.."
+                        nginx_mainline
+                        upkeep
+                        nginx_default
+                        ;;
+                  esac
+              clear
+
+              # Close Arg for Main Statement.
+                    ;;
+                  [nN]|[nN][oO])
+                    echo "You have said no? We cannot work without your permission!"
+                    ;;
+                  *)
+                    echo "Invalid response. You okay?"
+                    ;;
+              esac
+
 
 # Contact Information
             read -r -p "Contact Information: " REPLY
@@ -276,7 +341,6 @@
                 apt-get install python-pip
                 pip install nyx
               echo -e "ControlPort 9051\nCookieAuthentication 1" >> /etc/tor/torrc
-              echo "Performing upkeep.."
                 upkeep
                 service tor restart
             ;;
