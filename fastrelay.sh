@@ -49,7 +49,7 @@
     }
 
 # Setting up different Tor branches to prep for install
-    function tor_stable () {
+    function tor_stable() {
       echo "Grabbing Stable build dependencies.."
       echo deb http://deb.torproject.org/torproject.org $flavor main > /etc/apt/sources.list.d/repo.torproject.list
       echo deb-src http://deb.torproject.org/torproject.org $flavor main >> /etc/apt/sources.list.d/repo.torproject.list
@@ -59,14 +59,14 @@
         gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
     }
 
-    function tor_experimental () {
+    function tor_experimental() {
       echo "Grabbing Experimental build dependencies.."
         tor_stable
       echo deb https://deb.torproject.org/torproject.org tor-experimental-0.3.4.x-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
       echo deb-src https://deb.torproject.org/torproject.org tor-experimental-0.3.4.x-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
     }
 
-    function tor_nightly () {
+    function tor_nightly() {
       echo "Grabbing Nightly build dependencies.."
         tor_stable
       echo deb http://deb.torproject.org/torproject.org tor-nightly-master-$flavor main >> /etc/apt/sources.list.d/repo.torproject.list
@@ -74,14 +74,14 @@
     }
 
     # Setting up different NGINX branches to prep for install
-  function nginx_stable () {
+  function nginx_stable() {
       echo deb http://nginx.org/packages/$system/ $flavor nginx > /etc/apt/sources.list.d/$flavor.nginx.stable.list
       echo deb-src http://nginx.org/packages/$system/ $flavor nginx >> /etc/apt/sources.list.d/$flavor.nginx.stable.list
         wget https://nginx.org/keys/nginx_signing.key
         apt-key add nginx_signing.key
     }
 
-  function nginx_mainline () {
+  function nginx_mainline() {
       echo deb http://nginx.org/packages/mainline/$system/ $flavor nginx > /etc/apt/sources.list.d/$flavor.nginx.mainline.list
       echo deb-src http://nginx.org/packages/mainline/$system/ $flavor nginx >> /etc/apt/sources.list.d/$flavor.nginx.mainline.list
         wget https://nginx.org/keys/nginx_signing.key
