@@ -102,15 +102,12 @@
           wget -O /etc/default/nginx https://raw.githubusercontent.com/torworld/fastrelay/master/etc/default/nginx
           echo "Setting up configuration file for NGINX main configuration.."
             wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/torworld/fastrelay/master/nginx/nginx.conf
-        echo "Setting up folders.."
-          mkdir -p /etc/engine/ssl/live
-          mkdir -p /var/www/html/pub/live
         echo "Restarting the NGINX service..."
         service nginx restart
         echo "Grabbing fastrelay-website-template from GitHub.."
-          wget https://github.com/torworld/fastrelay-website-template/archive/master.tar.gz -O - | tar -xz -C /var/www/html/pub/live/  && mv /var/www/html/pub/live/fastrelay-website-template-master/* /var/www/html/pub/live/
+          wget https://github.com/torworld/fastrelay-website-template/archive/master.tar.gz -O - | tar -xz -C /usr/share/nginx/html/  && mv /usr/share/nginx/html/fastrelay-website-template-master/* /usr/share/nginx/html/
         echo "Removing temporary files/folders.."
-          rm -rf /var/www/html/pub/live/fastrelay-website-template-master*
+          rm -rf /usr/share/nginx/html/fastrelay-website-template-master*
       }
 
 
