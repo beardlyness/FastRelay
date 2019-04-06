@@ -279,7 +279,7 @@
                     HEIGHT=20
                     WIDTH=120
                     CHOICE_HEIGHT=2
-                    BACKTITLE="NGINXY"
+                    BACKTITLE="TorWorld | FastRelay"
                     TITLE="NGINX Branch Builds"
                     MENU="Choose one of the following Build options:"
 
