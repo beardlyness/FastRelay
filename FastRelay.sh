@@ -20,7 +20,7 @@
 # author           :TorWorld A Project Under The Crypto World Foundation.
 # contributors     :Beardlyness, Lunar, KsaRedFx, SPMedia, NurdTurd
 # date             :04-05-2019
-# version          :0.2.0 Beta
+# version          :0.1.6 Beta
 # os               :Debian/Ubuntu (Debian 8 - 10 | Ubuntu 14.04 - 18.10)
 # usage            :bash FastRelay.sh
 # notes            :If you have any problems feel free to email us: security [AT] torworld [DOT] org
@@ -122,7 +122,7 @@
         upkeep
       echo -e "\033[92mChecking software list..\e[0m"
 
-      [ ! -x  /usr/bin/lsb_release ] || [ ! -x  /usr/bin/wget ] || [ ! -x  /usr/bin/apt-transport-https ] || [ ! -x  /usr/bin/dirmngr ] || [ ! -x  /usr/bin/ca-certificates ] || [ ! -x  /usr/bin/dialog ] ; then
+      [ ! -x  /usr/bin/lsb_release ] || [ ! -x  /usr/bin/curl ] || [ ! -x  /usr/bin/wget ] || [ ! -x  /usr/bin/apt-transport-https ] || [ ! -x  /usr/bin/dirmngr ] || [ ! -x  /usr/bin/ca-certificates ] || [ ! -x  /usr/bin/dialog ] ; then
 
         echo -e "\033[92mlsb_release: checking for software..\e[0m"
         echo -e "\033[34mInstalling lsb_release, Please Wait...\e[0m"
@@ -131,6 +131,10 @@
         echo -e "\033[92mwget: checking for software..\e[0m"
         echo -e "\033[34mInstalling wget, Please Wait...\e[0m"
           apt-get install wget
+
+        echo -e "\033[92mcurl: checking for software..\e[0m"
+        echo -e "\033[34mInstalling curl, Please Wait...\e[0m"
+          apt-get install curl
 
         echo -e "\033[92mapt-transport-https: checking for software..\e[0m"
         echo -e "\033[34mInstalling apt-transport-https, Please Wait...\e[0m"
